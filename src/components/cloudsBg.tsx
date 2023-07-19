@@ -4,7 +4,7 @@ import { ReactNode } from 'react'
 import Plane from './plane/plane'
 
 export default function CloudsBg(props:{
-  children:React.ReactNode
+  children?:React.ReactNode
 }) {
   
     let isFirstRender = React.useRef(true)
