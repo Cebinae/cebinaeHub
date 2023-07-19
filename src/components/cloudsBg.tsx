@@ -3,9 +3,7 @@ import React, { Component } from 'react'
 import { ReactNode } from 'react'
 import Plane from './plane/plane'
 
-export default function CloudsBg(props:{
-  children?:React.ReactNode
-}) {
+export default function CloudsBg() {
   
     let isFirstRender = React.useRef(true)
     let isFocused = React.useRef(true)
@@ -136,7 +134,6 @@ export default function CloudsBg(props:{
       
       <main className=' flex flex-row justify-center items-start h-[100vh] w-[100vw] bg-bg-1000 overflow-hidden' id='animatedBg'>
           {/* <Plane width={800}></Plane> */}
-{props.children}
           <Plane width={500}></Plane>
       </main>
             
