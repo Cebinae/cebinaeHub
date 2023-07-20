@@ -1,6 +1,5 @@
 'use client'
-import React, { Component } from 'react'
-import { ReactNode } from 'react'
+import React from 'react'
 import Plane from './plane/plane'
 
 export default function CloudsBg() {
