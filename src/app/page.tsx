@@ -10,7 +10,7 @@ export default function Home() {
 
 
   return (
-    <main className=" h-[200vh] w-full">
+    <main className=" h-[100vh] w-full">
       <Greeting></Greeting>
       <StarsBg></StarsBg>
       <Education></Education>
