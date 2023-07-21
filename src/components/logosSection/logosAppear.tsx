@@ -13,7 +13,7 @@ export default function LogosSection(){
     // let [redux, setRedux] = useState(false)
 
     let alreadyShown = useRef(false)
-    let element = useRef<Element | null>()
+    let element = useRef<Element | null>(null)
     let appearChain = async()=>{
             setRaect(true)
         await sleep(500)
