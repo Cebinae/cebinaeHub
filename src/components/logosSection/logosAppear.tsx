@@ -55,7 +55,7 @@ export default function LogosSection(){
 
     return(
        
-            <div ref={element} className="absolute bg-transparent mt-[7vh] w-[62vw] h-[min] flex flex-row ml-[5vw]" id="logos" onLoad={()=>console.log('focused')}>
+            <div ref={element?element:<div></div>} className="absolute bg-transparent mt-[7vh] w-[62vw] h-[min] flex flex-row ml-[5vw]" id="logos" onLoad={()=>console.log('focused')}>
                 {react?<TechLogo delay="1" title="React" logoPath="React-icon.svg"></TechLogo>:null}
                 {reactnative?<TechLogo delay="0.5" title="React Native" logoPath="React-icon.svg"></TechLogo>:null}
                 {nextjs?<TechLogo delay="0.5"  title="Next.js" logoPath="next.svg"></TechLogo>:null}
