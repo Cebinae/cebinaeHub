@@ -3,9 +3,10 @@ module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/logosSection/*.{tsx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx}',
   ],
-  mode:"jit",
   theme: {
     extend: {
               backgroundImage: {
@@ -132,16 +133,16 @@ module.exports = {
                         transform:'translateY(0)'
                     },
                     '25%':{
-                        transform:'translateY(-15%)'
+                        transform:'translateY(-30px)'
                     },  
                     '50%':{
                         transform:'translateY(0)'
                     },  
                     '75%':{
-                        transform:'translateY(15%)'
+                        transform:'translateY(30px)'
                     },
                     '100%':{
-                        transform:'translateY(0)'
+                        transform:'translateY(0px)'
                     },
                     }
               

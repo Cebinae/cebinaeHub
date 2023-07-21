@@ -28,8 +28,14 @@ export default function StarsBg() {
                     <LogosSection></LogosSection>
                 </div>
 
-                <article className="relative bg-transparent w-[40vw]  h-[min] rounded-xl">
-                    <p> Here're some technologies i also had experience with: </p>
+                <article className="relative bg-transparent w-[40vw] ml-[5vw] mt-[3vh] h-[min] rounded-xl">
+                    <p className="text-green text-lg"> <span className="text-lightSecondary">Here're some technologies i also had experience with: </span> 
+                    TypeScript, Postman, REST-api, redux-persist, gradle, nativeCLI, expoCLI, native modules, background-actions, notifee, push-notifications, rn-keychain, async-storage, axios
+                    <span className="text-lightSecondary">  and other minor technologies</span>
+                    </p>
+                </article>
+                <article className="w-[40vw] ml-[5vw] mt-[3vh] h-[min]">
+                    <p className="text-lightSecondary text-lg">There's some other technologies im especially interested in and look forward to try my hand: Java(andorid), Flutter, and node.js based back-end</p>
                 </article>
                 
             </main>
