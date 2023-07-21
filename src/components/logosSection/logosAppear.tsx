@@ -43,7 +43,7 @@ export default function LogosSection(){
             });
           });
 
-          observer.observe(cachedRef)
+          cachedRef? observer.observe(cachedRef) : null
 
 
 
