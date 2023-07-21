@@ -1,0 +1,57 @@
+@keyframes logo {
+    0% {
+        opacity:0;
+        transform:translateY(150%)
+      }
+    100% {
+        opacity:1;
+        transform:translateY(0%)
+      }
+}
+
+/* @keyframes logoWiggle {
+    0% {
+        transform:translateY(15%)
+    }
+   25%{
+     transform:translateY(-15%)
+    }
+    
+    50% {
+        transform:translateY(15%)
+    }
+    100% {
+        transform:translateY(-15%)
+    }
+} */
+
+@keyframes logoWiggle {
+   100%{
+    transform:translateY(-60px)
+   }
+   87.5%{
+    transform:translateY(-30px)
+
+   }
+   75%{
+    transform: translateY(0px);
+   }
+   62.5%{
+    transform:translateY(30px)
+   }
+   50%{
+    transform:translateY(60px)
+   }
+   37.5%{
+    transform:translateY(30px)
+   }
+   25%{
+    transform:translateY(-0px)
+   }
+   12.5%{
+    transform: translateY(-30px);
+   }
+   0%{
+    transform:translateY(-60px)
+   }
+}

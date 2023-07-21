@@ -62,6 +62,88 @@ module.exports = {
                       '100%':{ 
                         transform:'translateX(2000px)' 
                       }
+                    },
+                    stars1:{
+                      '0%': {
+                        opacity:0.3,
+                        transform:'scale(0.5)'
+                      },
+                      '50%': {
+                        opacity:0.3,
+                        transform:'scale(0.5)',                        
+                      },
+                      '75%': {
+                        opacity:0.7,
+                        transform:'scale(1.3)'
+                      },
+                      '100%': {
+                        opacity:0.3,
+                        transform:'scale(0.5)'
+                      },
+                    },
+                    stars2:{
+                      '0%': {
+                        opacity:0.3,
+                        transform:'scale(0.5)'
+                      },
+                      '40%': {
+                        opacity:0.7,
+                        transform:'scale(1.3)',                        
+                      },
+                      '80%': {
+                        opacity:0.3,
+                        transform:'scale(0.5)'
+                      },
+                      '100%': {
+                        opacity:0.3,
+                        transform:'scale(0.5)'
+                      },
+                    },
+                    stars3:{
+                      '10%': {
+                        opacity:0.3,
+                        transform:'scale(0.5)'
+                      },
+                      '30%': {
+                        opacity:0.7,
+                        transform:'scale(1.3)',                        
+                      },
+                      '60%': {
+                        opacity:0.3,
+                        transform:'scale(0.5)'
+                      },
+                      '100%': {
+                        opacity:0.3,
+                        transform:'scale(0.5)'
+                      },
+                    },
+                    logo:{
+                      '0%':{
+                        opacity:0,
+                        transform:'translateY(150%)'
+                      },
+                      '100%':{
+                        opacity:1,
+                        transform:'translateY(0%)'
+                      }
+                    },
+                    logoWiggle:{
+                    '0%':{
+                        transform:'translateY(0)'
+                    },
+                    '25%':{
+                        transform:'translateY(-15%)'
+                    },  
+                    '50%':{
+                        transform:'translateY(0)'
+                    },  
+                    '75%':{
+                        transform:'translateY(15%)'
+                    },
+                    '100%':{
+                        transform:'translateY(0)'
+                    },
+                    }
               
               }
                   
@@ -71,9 +153,12 @@ module.exports = {
       greetingLeft:'greetingLeft 1s linear',
       greetingRight:"greetingRight 1s linear",
       greetingArticle:'greetingArticle 1s linear',
-      headerAppear:'headerAppear 1s linear',
+      headerAppear:'headerAppear 0.2s linear',
       rotorSpin: 'rotorSpin 1s linear infinite',
-      cloudsToRight : 'cloudsToRight 20s linear'
+      cloudsToRight : 'cloudsToRight 20s linear',
+      stars1: 'stars1 3s ease-in-out infinite 2s',
+      stars2: 'stars2 3s ease-in-out infinite 3s',
+      stars3: 'stars3 3s ease-in-out infinite 4s'
     },
     colors:{
       'green': '#8dd294',
@@ -100,4 +185,4 @@ module.exports = {
   },
 
   plugins: [],
-  }}
+  }

@@ -23,7 +23,7 @@ export default function Greeting(){
         <main className=" relative h-[100vh] w-full flex flex-row justify-between" id='leftGreeting'>
 
             <section className=" left-0 h-[100vh] w-[45vw] bg-bg700 will-change-transform">
-                <Image className= 'h-full w-auto'  src={'/morda.jpg'} alt='myPrettyFace' width={0} height={0} sizes="100vh"></Image>
+                <Image className= 'h-full w-auto' priority={true}  src={'/morda.jpg'} alt='myPrettyFace' width={0} height={0} sizes="100vh"></Image>
             </section>
 
 
@@ -44,7 +44,7 @@ export default function Greeting(){
                     Since childhood i`m keen on computer science and had no doubts about my craft.
                     Being mostly interested in hight-quality web instactructure i found my passion in creating performant client-side applications.
                     My aim is to become a teammate that greatly contributes to a company's business value.
-                    Creating something worthy is always a competition. And i'm ready to competee.
+                    Creating something worthy is often a competition. And i'm ready to competee.
                     </p>
 
                 </article>
@@ -53,7 +53,6 @@ export default function Greeting(){
 
             </section>
             <div className="fixed w-[350px] h-[350px] right-[1vw] top-[87vh]">
-            <ArrowDown></ArrowDown>
             </div>
         </main>
     )

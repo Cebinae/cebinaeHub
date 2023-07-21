@@ -1,3 +1,4 @@
+import ArrowDown from '@/components/buttonDown'
 import Education from '@/components/eduSection'
 import Greeting from '@/components/greeting'
 import StarsBg from '@/components/staryBg'
@@ -13,6 +14,7 @@ export default function Home() {
       <Greeting></Greeting>
       <StarsBg></StarsBg>
       <Education></Education>
+      {/* <ArrowDown></ArrowDown> */}
     </main>
   )
 }

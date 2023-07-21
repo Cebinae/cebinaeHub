@@ -1,0 +1,10 @@
+@keyframes stars{
+    from{
+        transform: scale(0.3);
+        opacity: 0.4;
+    }
+    to{
+        transform: scale(1.4);
+        opacity: 1;
+    }
+}
