@@ -1,0 +1,61 @@
+newmtl Cel
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 0.392151 0.392151
+Ks 0.000000 0.000000 0.000000
+adobe_interior_color 1.000000 0.392151 0.392151
+Ns 2.000000
+d 1.000000
+Tr 0.000000
+Pr 0.333333
+Pm 0.080000
+adobe_density 0.000000
+adobe_translucence 0.000000
+adobe_glow 0.000000
+map_Kd Cel.jpg
+
+newmtl Camara
+Ka 0.000000 0.000000 0.000000
+Kd 0.768627 0.183871 0.183871
+Ks 0.000000 0.000000 0.000000
+adobe_interior_color 0.803922 0.803922 0.803922
+Ns 2.000000
+d 1.000000
+Tr 0.000000
+Pr 0.333333
+Pm 0.080000
+adobe_density 0.000000
+adobe_translucence 0.000000
+adobe_glow 0.000000
+map_Kd Camara.jpg
+
+newmtl Blanco
+Ka 0.000000 0.000000 0.000000
+Kd 0.803922 0.803922 0.803922
+Ks 0.000000 0.000000 0.000000
+adobe_interior_color 0.803922 0.803922 0.803922
+Ns 2.000000
+d 1.000000
+Tr 0.000000
+Pr 0.333333
+Pm 0.080000
+adobe_density 0.000000
+adobe_translucence 0.000000
+adobe_glow 0.000000
+map_Kd Blanco.jpg 
+
+newmtl Emission
+Ka 0.000000 0.000000 0.000000
+Kd 0.631373 0.616510 0.616510
+Ks 0.000000 0.000000 0.000000
+adobe_interior_color 0.784314 0.784314 0.784314
+Ns 2.000000
+d 1.000000
+Tr 0.000000
+Pr 0.333333
+Pm 0.080000
+adobe_density 0.000000
+adobe_translucence 0.000000
+adobe_glow 0.000000
+map_Kd EmissionMain.jpg 
+adobe_map_Sphere_Environment Emission - EmissionBg.jpg
+

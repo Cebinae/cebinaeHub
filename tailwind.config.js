@@ -1,3 +1,5 @@
+const { transform } = require('typescript');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -143,7 +145,15 @@ module.exports = {
                     },
                     '100%':{
                         transform:'translateY(0px)'
+                      },
                     },
+                    eduNote:{
+                      '0%': {
+                        transform: 'translateX(800%)'          
+                      },
+                      '100%':{
+                        transform: 'translateX(0)'     
+                      }
                     }
               
               }
@@ -159,7 +169,8 @@ module.exports = {
       cloudsToRight : 'cloudsToRight 20s linear',
       stars1: 'stars1 3s ease-in-out infinite 2s',
       stars2: 'stars2 3s ease-in-out infinite 3s',
-      stars3: 'stars3 3s ease-in-out infinite 4s'
+      stars3: 'stars3 3s ease-in-out infinite 4s',
+      eduNote: 'eduNote 3s ease-in-out'
     },
     colors:{
       'green': '#8dd294',

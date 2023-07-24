@@ -18,8 +18,8 @@ export default function Education() {
 
             <section className="relative w-[50vw] h-[100vh] flex flex-row justify-end">
                 <div className="absolute w-[50vw] h-[min]">
-
-                    <div className="relative top-[10vh]  right-[-30vw] origin-top-left mt-[20vh] rotate-[-20deg]  bg-bg1000 h-[80vh] w-[22vw]">
+                {/* rotate-[-20deg] */}
+                    <div style={{willChange:"transform"}} className="relative top-[10vh]  right-[-30vw] origin-bottom-left mt-[20vh] rotate-[-20deg] animate-eduNote bg-bg1000 h-[80vh] w-[22vw]">
                         <div className="absolute z-[-2] w-[100%] h-[100%] left-[2vw] top-[-2vh] bg-darkOrange">
                         <h1 className="absolute text-[3vw] ml-[1vw]">Education</h1>
                         </div>
