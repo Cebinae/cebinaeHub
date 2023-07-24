@@ -1,6 +1,4 @@
-import AndroidScene from "@/components/portfolioPage/android/androidScene"
 import SecondPhone from "@/components/portfolioPage/phoneObg/phoneObj"
-import PhoneScene from "@/components/portfolioPage/phoneScene"
 
 
 export default function PortfolioPage() {
