@@ -1,5 +1,6 @@
-import Carousel from "./carousel";
+// import Carousel from "./carousel";
 import EduNote from "./eduPage/eduNote";
+import Carousel from "./eduPage/gallery";
 
 import { gsap } from "gsap/gsap-core"
 
@@ -9,8 +10,8 @@ export default function Education() {
 
         <main className="w-full h-full bg-bg700 overflow-hidden flex flex-row justify-between" id="eduSection">
 
-            <section className="block w-[40vw] h-[100vh] bg-bg400 flex-1 flex flex-col justify-between">
-                <div className="bg-blue h-[35vh] w-[40vw]">
+            <section className="block w-[40vw] h-[100vh]  flex-1 flex flex-col justify-between">
+                <div className="bg-transparent h-[35vh] w-[40vw]">
                     <p>Education</p>
                     <Carousel></Carousel>
                 </div>
