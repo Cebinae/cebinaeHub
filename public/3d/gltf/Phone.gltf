@@ -128,27 +128,27 @@
         {
             "bufferView": 7,
             "mimeType": "image/jpeg",
-            "name": "Cel - Текстура по умолчанию.JPG"
+            "name": "Cel.JPG"
         },
         {
             "bufferView": 8,
             "mimeType": "image/jpeg",
-            "name": "Camara - Текстура по умолчанию.JPG"
+            "name": "Camara.JPG"
         },
         {
             "bufferView": 9,
             "mimeType": "image/jpeg",
-            "name": "Blanco - Текстура по умолчанию.JPG"
+            "name": "Blanco.JPG"
         },
         {
             "bufferView": 10,
             "mimeType": "image/jpeg",
-            "name": "Emission - Основной цвет.JPG"
+            "name": "Emission.JPG"
         },
         {
             "bufferView": 11,
             "mimeType": "image/jpeg",
-            "name": "Emission - Фон.JPG"
+            "name": "Emission.JPG"
         }
     ],
     "materials": [

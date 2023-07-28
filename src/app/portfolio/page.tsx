@@ -1,12 +1,17 @@
 import SecondPhone from "@/components/portfolioPage/phoneObg/phoneObj"
+import AndroidObj from "@/components/portfolioPage/androidObj/androidObj"
+import PhoneScene from "@/components/portfolioPage/phoneScene"
+import SkinhunterFirst from "@/components/portfolioPage/fisrtScreen/skinhunter"
 
 
 export default function PortfolioPage() {
     return (
-        <div className="flex-1 bg-bg400 flex flex-row justify-center align-center  items-center mt-[30vh]">
+        <div className="flex-1 bg-bg400 h-[300vh]">
             {/* <PhoneScene></PhoneScene> */}
             {/* <AndroidScene></AndroidScene> */}
-            <SecondPhone></SecondPhone>
+            {/* <SecondPhone></SecondPhone> */}
+            {/* <AndroidObj></AndroidObj> */}
+            <SkinhunterFirst></SkinhunterFirst>
         </div>
     )
 }

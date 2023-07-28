@@ -62,6 +62,7 @@ export default function Carousel (){
                     showPlayButton={false}
                     autoPlay={true}
                     showNav={false}
+                    lazyLoad={true}
 
                     ></ImageGallery>
         </div>
