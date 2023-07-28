@@ -25,7 +25,7 @@ const Scene = () => {
 
     const meshBox= new THREE.Box3().setFromObject(obj.children[0])
     const meshCenter = meshBox.getCenter(new THREE.Vector3())
-    obj.children[0].geometry.center()
+    // obj.children[0].geometry.center()
 
     // obj.children[0].position.x = meshCenter.x
     obj.children[0].position.x = 5
@@ -52,7 +52,7 @@ const Scene = () => {
 
     obj.children[0].rotation.z += 0.01
 
-    function calculatePosition(time) {
+    function calculatePosition(time:any) {
       // Рассчитываем прогресс анимации в диапазоне от 0 до 1
       var progress = time / animationDuration;
       // Применяем логарифмическую функцию для замедления
@@ -81,7 +81,7 @@ export default function SecondPhone() {
       <axesHelper args={[5]} />
         <Suspense fallback={null}>
             <ambientLight intensity={1}></ambientLight>
-          <Scene position={[0,0,-1]}/>
+          <Scene/>
           <OrbitControls />
         </Suspense>
       </Canvas>
