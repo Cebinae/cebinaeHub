@@ -1,6 +1,6 @@
-import SecondPhone from "@/components/portfolioPage/phoneObg/phoneObj"
-import AndroidObj from "@/components/portfolioPage/androidObj/androidObj"
-import PhoneScene from "@/components/portfolioPage/phoneScene"
+// import SecondPhone from "@/components/portfolioPage/phoneObg/phoneObj"
+// import AndroidObj from "@/components/portfolioPage/androidObj/androidObj"
+// import PhoneScene from "@/components/portfolioPage/phoneScene"
 import SkinhunterFirst from "@/components/portfolioPage/fisrtScreen/skinhunter"
 
 
