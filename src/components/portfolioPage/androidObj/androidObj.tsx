@@ -37,7 +37,7 @@ const Scene = () => {
 
   // console.log(modelRef.current);
   return (
-     <primitive ref={modelRef} object={obj} scale={0.7} position={[0, 0, 0]} />
+     <primitive ref={modelRef} object={obj} scale={0.35} position={[0, 0, 0]} />
   )
 
 };

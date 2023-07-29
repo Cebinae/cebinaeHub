@@ -1,7 +1,9 @@
 // import SecondPhone from "@/components/portfolioPage/phoneObg/phoneObj"
 // import AndroidObj from "@/components/portfolioPage/androidObj/androidObj"
 // import PhoneScene from "@/components/portfolioPage/phoneScene"
-import SkinhunterFirst from "@/components/portfolioPage/fisrtScreen/skinhunter"
+import ActionsBtn from "@/components/portfolioPage/projectActionsBtn"
+import SkinhunterSecond from "@/components/portfolioPage/screens/skinHunterSecond"
+import SkinhunterFirst from "@/components/portfolioPage/screens/skinhunter"
 
 
 export default function PortfolioPage() {
@@ -12,6 +14,8 @@ export default function PortfolioPage() {
             {/* <SecondPhone></SecondPhone> */}
             {/* <AndroidObj></AndroidObj> */}
             <SkinhunterFirst></SkinhunterFirst>
+            <SkinhunterSecond></SkinhunterSecond>
+            <ActionsBtn></ActionsBtn>
         </div>
     )
 }

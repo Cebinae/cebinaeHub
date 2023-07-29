@@ -48,9 +48,9 @@ const Scene = () => {
     let starttime = 0;
     let initialPosition = 5;
     let targetPosition = 1;
-    let animationDuration = 10; //
+    let animationDuration = 3; //
 
-    obj.children[0].rotation.z += 0.01
+    obj.children[0].rotation.z += 0.03
 
     function calculatePosition(time:any) {
       // Рассчитываем прогресс анимации в диапазоне от 0 до 1
@@ -68,21 +68,21 @@ const Scene = () => {
 
   
 
-  return <primitive ref={ref} object={obj} scale={2} position={[0, 0, 0]} />;
+  return <primitive ref={ref} object={obj} scale={2.2} position={[0, 0, 0]} />;
 };
 
 export default function SecondPhone() {
 
 
   return (
-    <div className="bg-bg700 h-[50vh] w-[50vw]">
+    <div className="bg-bg400 h-[80vh] w-[61vw]">
       <Canvas>
       <ambientLight intensity={1} ></ambientLight>
-      <axesHelper args={[5]} />
+      {/* <axesHelper args={[15]} /> */}
         <Suspense fallback={null}>
             <ambientLight intensity={1}></ambientLight>
           <Scene/>
-          <OrbitControls />
+          {/* <OrbitControls /> */}
         </Suspense>
       </Canvas>
     </div>
