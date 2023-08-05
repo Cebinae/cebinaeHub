@@ -4,7 +4,7 @@
 import ActionsBtn from "@/components/portfolioPage/projectActionsBtn"
 import SkinhunterSecond from "@/components/portfolioPage/screens/skinHunterSecond"
 import SkinhunterFirst from "@/components/portfolioPage/screens/skinhunter"
-
+import CloudsBg from "@/components/cloudsBg"
 
 export default function PortfolioPage() {
     return (
@@ -15,6 +15,7 @@ export default function PortfolioPage() {
             {/* <AndroidObj></AndroidObj> */}
             <SkinhunterFirst></SkinhunterFirst>
             <SkinhunterSecond></SkinhunterSecond>
+            <CloudsBg></CloudsBg>
             <ActionsBtn></ActionsBtn>
         </div>
     )

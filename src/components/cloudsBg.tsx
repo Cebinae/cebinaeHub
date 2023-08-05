@@ -1,6 +1,8 @@
 'use client'
 import React from 'react'
 import Plane from './plane/plane'
+import websiteCard from './websiteCard'
+import WebsiteCard from './websiteCard'
 
 export default function CloudsBg() {
   
@@ -37,7 +39,7 @@ export default function CloudsBg() {
           img.style.position = 'absolute'
           img.style.left = `-${width*1.5}px`
           img.style.willChange = 'transform'
-          img.style.top = `${top}px`
+          img.style.top = `3${top}0vh`
           img.style.transform = 'translateZ(0)'
           img.src = `/clouds/${getRandomInt(1, 10).toString()}.svg`
           return img
@@ -53,7 +55,7 @@ export default function CloudsBg() {
                 // console.log('thread ', thread, 'value', i);
                 // await sleep(3000)
   
-              let cloudElem = createCloudElement( i.toString() , thread, 50, 100, getRandomInt(1, 6)*100)
+              let cloudElem = createCloudElement( i.toString() , thread, 50, 100, getRandomInt(1, 9))
               backgroundComp?.appendChild(cloudElem)
               let randomY = getRandomInt(1, 6)*100
   
@@ -131,9 +133,10 @@ export default function CloudsBg() {
   
     return (
       
-      <main className=' flex flex-row justify-center items-start h-[100vh] w-[100vw] bg-bg-1000 overflow-hidden' id='animatedBg'>
+      <main className='absolute flex flex-row justify-center items-start h-[100vh] w-[100vw] bg-bg1000 overflow-hidden' id='animatedBg'>
           {/* <Plane width={800}></Plane> */}
           <Plane width={500}></Plane>
+          <WebsiteCard></WebsiteCard>
       </main>
             
     )

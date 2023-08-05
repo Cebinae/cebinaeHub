@@ -3,7 +3,7 @@ import SecondPhone from "../phoneObg/phoneObj";
 
 export default function SkinhunterFirst() {
     return(
-        <div className="w-[100vw] relative z-[1] h-[100vh] mt-[10vh] left-[3vw] flex flex-col justify-start align-start ">
+        <div className="w-[100vw] relative z-[1] h-[100vh] mt-[10vh] bg-darkGreen left-[3vw] flex flex-col justify-start align-start ">
 
             <div>
                 <h1 className="text-9xl text-lightPrimary">SkinHunter</h1>

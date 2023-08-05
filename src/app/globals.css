@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
-@import "~react-image-gallery/styles/css/image-gallery.css";
 
 :root {
   --foreground-rgb: 0, 0, 0;

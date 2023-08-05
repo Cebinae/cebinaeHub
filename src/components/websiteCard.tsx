@@ -1,6 +1,6 @@
 
 
-export default function Contacts() {
+export default function WebsiteCard() {
     return(
         <main className="absolute rotate-0 z-[9999] h-[70vh] w-[70vw] bg-bg700 items-center right-auto flex flex-col justify-start items-center opacity-[0.5]">
 
