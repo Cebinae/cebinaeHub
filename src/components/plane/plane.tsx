@@ -25,9 +25,9 @@ useEffect(()=>{
 
 
     return(
-        <div className='relative z-[1] h-min w-[min] bg-transparent top-[100px]' id='plane'>
-            <img src="/plane/plane3.png"  height={300} width={props.width}></img>
-            <img src='/plane/rotor2.svg' className="absolute z-[999]  animate-rotorSpin  top-[33%] right-[1px]"  height={300} width={props.width/6}></img>
+        <div style={{willChange:'transform'}} className='relative transform-gpu z-[1] h-min w-[min] bg-transparent top-[100px]' id='plane'>
+            <img src="/plane/plane3.png" style={{willChange:'transform'}} height={300} width={props.width}></img>
+            <img src='/plane/rotor2.svg' style={{willChange:'transform'}} className="absolute z-[999] transform-gpu animate-rotorSpin  top-[33%] right-[1px]"  height={300} width={props.width/6}></img>
         </div>
     )
 }

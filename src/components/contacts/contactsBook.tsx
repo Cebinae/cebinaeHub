@@ -36,7 +36,13 @@ let isFirstRender = useRef(true)
                 onComplete:()=> console.log('animation ended')
             })
 
-            gsap.to('#bookLabel',{
+            gsap.fromTo('#bookLabel',{
+                repeat:0,
+                opacity:1,
+                duration:0.1,
+
+                onComplete:()=> console.log('animation ended')
+            },{
                 delay:0.3,
                 repeat:0,
                 // color: '#f08441',
@@ -47,10 +53,10 @@ let isFirstRender = useRef(true)
             })
 
             gsap.to('#page',{
-                delay:0.3,
+                delay:0.35,
                 repeat:0,
                 opacity:1,
-                duration:2,
+                duration:0.5,
 
                 onComplete:()=> console.log('animation ended')
             })
