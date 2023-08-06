@@ -3,14 +3,31 @@ import React from 'react'
 import Plane from './plane/plane'
 import websiteCard from './websiteCard'
 import WebsiteCard from './websiteCard'
+import { useRef, useState } from 'react'
+
 
 export default function CloudsBg() {
   
     let isFirstRender = React.useRef(true)
     let isFocused = React.useRef(true)
     let isRunning = React.useRef(false)
+
+    let bgRef = useRef(null)
+    let [planeVisible, setPlane] = useState(false)
   
     React.useEffect(()=>{
+
+      let cachedRef = bgRef.current
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          entry.isIntersecting?setPlane(true):setPlane(false)
+          
+          
+        });
+      });
+
+      cachedRef? observer.observe(cachedRef) : null
       
       window.addEventListener('blur', ()=>isFocused.current = false)
       window.addEventListener('focus', ()=>isFocused.current = true)
@@ -61,21 +78,7 @@ export default function CloudsBg() {
   
             await sleep(20000)
             backgroundComp?.removeChild(cloudElem)
-  
-            //  await gsap.fromTo(`#cloud${i.toString()}${thread}`,{
-            //     x:-400,
-            //     y: randomY
-            //   },{
-            //     x:3000,
-            //     duration:25,
-            //     y:randomY,
-            //     delay:getRandomInt(1,2),
-            //     ease:'none',
-  
-            //     onComplete: ()=>{
-            //       backgroundComp?.removeChild(cloudElem)
-            //     }
-            //   })
+         
           }
       }
   
@@ -114,7 +117,7 @@ export default function CloudsBg() {
   
   
       }
-      isFirstRender.current&&document.visibilityState==='visible'&&isRunning.current===false?runAnimations():null
+      isFirstRender.current&&document.visibilityState==='visible'&&planeVisible&&isRunning.current===false?runAnimations():null
 
 
 
@@ -133,9 +136,9 @@ export default function CloudsBg() {
   
     return (
       
-      <main className='absolute flex flex-row justify-center items-start h-[100vh] w-[100vw] bg-bg1000 overflow-hidden' id='animatedBg'>
+      <main ref={bgRef} className='absolute flex flex-row justify-center items-start h-[100vh] w-[100vw] bg-bg1000 overflow-hidden' id='animatedBg'>
           {/* <Plane width={800}></Plane> */}
-          <Plane width={500}></Plane>
+          {planeVisible?<Plane width={500}></Plane>:null}
           <WebsiteCard></WebsiteCard>
       </main>
             
