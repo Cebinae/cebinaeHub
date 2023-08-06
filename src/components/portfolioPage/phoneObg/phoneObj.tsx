@@ -8,19 +8,22 @@ import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
 import { DDSLoader } from "three-stdlib";
 import { Suspense } from "react";
-import {useRef, useEffect} from 'react'
+import {useRef, useState, useEffect } from 'react'
 import {Stage} from '@react-three/drei'
+
 
 THREE.DefaultLoadingManager.addHandler(/\.dds$/i, new DDSLoader());
 
-const Scene = () => {
-  const materials = useLoader(MTLLoader, "/obj4/Phone.mtl");
-  const obj = useLoader(OBJLoader, "/obj4/Phone.obj", (loader) => {
-    materials.preload();
-    loader.setMaterials(materials);
-  });
+var shouldUpdate = false    // necessary to link 2 components, props dont work here, redux would be slow in loop
 
-  let ref = useRef()
+
+const Scene = (props:{isVisible:boolean}) => {
+   
+    const materials = useLoader(MTLLoader, "/obj4/Phone.mtl");
+    const obj = useLoader(OBJLoader, "/obj4/Phone.obj", (loader) => {
+      materials.preload();
+      loader.setMaterials(materials);
+    });
 
 
     const meshBox= new THREE.Box3().setFromObject(obj.children[0])
@@ -35,46 +38,78 @@ const Scene = () => {
     obj.children[0].rotation.x = 1.58
     obj.children[0].rotation.z = 0.025
     obj.children[0].rotation.y = 0.03
-
-
 //seems like ready
 
-let starttime = 0;
-let initialPosition = 5;
-let targetPosition = 1;
-let animationDuration = 3; //
+    let starttime = 0;
+    let initialPosition = 5;
+    let targetPosition = 1;
+    let animationDuration = 3; //
 
 function calculatePosition(time:any) {
   // Рассчитываем прогресс анимации в диапазоне от 0 до 1
   var progress = time / animationDuration;
   // Применяем логарифмическую функцию для замедления
-  var position = initialPosition + (targetPosition - initialPosition) * Math.log(1 + progress * 9);
-  return position;
+  return initialPosition + (targetPosition - initialPosition) * Math.log(1 + progress * 9);
+  
 }
 
-  useFrame(({clock})=>{ 
-    let time = clock.getElapsedTime()
-    // console.log(obj.children[0]);
-    obj.children[0].rotation.z += 0.03
-    obj.children[0].position.x >0? obj.children[0].position.x = calculatePosition(time/10):null
+const animate = (time:number)=>{
+    obj.children[0].rotation.z += 0.03 
+    if(obj.children[0].position.x >0){
+        obj.children[0].position.x = calculatePosition(time/10) 
+    }
+    
+    
+}
 
+  let visibility = props.isVisible
+  useFrame(({clock}, state, delta)=>{ 
+    // console.log('useFrame', shouldUpdate)
+    let time = clock.getElapsedTime()
+    // console.log(state);
+    shouldUpdate?animate(time):null
   })
 
 
-  return <primitive ref={ref} object={obj} scale={2.2} position={[0, 0, 0]} />;
+  return (
+      <primitive  object={obj} scale={2.2} position={[0, 0, 0]} />
+  )
 };
 
+
+
+
+
 export default function SecondPhone() {
+  let ref = useRef(null)
+  let focused = useRef(true)
+  useEffect(()=>{
+        const cachedRef = ref.current
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              let visible=()=>{
+                shouldUpdate = true
+                console.log('INTERSECTING')
+              }
+              let hidden=()=>{
+                shouldUpdate = false
+                console.log('NOT INTERSECTING')
+              }
+              entry.isIntersecting? visible(): hidden()
+            });
+          });
+
+          cachedRef? observer.observe(cachedRef) : null
+  }, [])
 
 
   return (
-    <div className="bg-bg400 h-[80vh] w-[61vw]">
+    <div ref={ref} style={{willChange:'transform'}} className="bg-bg400 h-[80vh] w-[61vw]">
       <Canvas>
-      <ambientLight intensity={1} ></ambientLight>
       {/* <axesHelper args={[15]} /> */}
         <Suspense fallback={null}>
-            <ambientLight intensity={1}></ambientLight>
-          <Scene/>
+            <ambientLight intensity={2}></ambientLight>
+          <Scene isVisible={focused.current}/>
           {/* <OrbitControls /> */}
         </Suspense>
       </Canvas>

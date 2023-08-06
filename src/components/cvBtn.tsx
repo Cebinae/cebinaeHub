@@ -31,15 +31,15 @@ export default function CvBtn (){
             rotate-[0deg]
             pointer-events-none
             shadow-[0_35px_0px_25px_rgba(23,25,26,1)]
-            fixed z-[-9999] h-[80vh] w-[20vw] bg-darkGreen 
-            transform-gpu transition-all duration-500
+            fixed z-[-9999999999] h-[80vh] w-[20vw] bg-darkGreen 
+         transition-all duration-500
             origin-bottom-left
             top-[10vh] right-[-22vw]
             group-hover/btn:rotate-[-20deg]
             group-hover/btn:top-[20vh]    group-hover/btn:right-[-20vw] group-hover:rotate-[-20deg] group-hover/btn:block
 
             "> 
-                <p className="text-3xl relative z-[2] text-lightPrimary">Resume</p>
+                <p className="text-3xl absolute z-[2] text-lightPrimary">Resume</p>
             </div>
     </div>
     )
