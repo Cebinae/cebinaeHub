@@ -39,34 +39,27 @@ const Scene = () => {
 
 //seems like ready
 
-  useFrame(({clock})=>{
-    
+let starttime = 0;
+let initialPosition = 5;
+let targetPosition = 1;
+let animationDuration = 3; //
+
+function calculatePosition(time:any) {
+  // Рассчитываем прогресс анимации в диапазоне от 0 до 1
+  var progress = time / animationDuration;
+  // Применяем логарифмическую функцию для замедления
+  var position = initialPosition + (targetPosition - initialPosition) * Math.log(1 + progress * 9);
+  return position;
+}
+
+  useFrame(({clock})=>{ 
     let time = clock.getElapsedTime()
-    console.log(obj.children[0]);
-
-
-    let starttime = 0;
-    let initialPosition = 5;
-    let targetPosition = 1;
-    let animationDuration = 3; //
-
+    // console.log(obj.children[0]);
     obj.children[0].rotation.z += 0.03
-
-    function calculatePosition(time:any) {
-      // Рассчитываем прогресс анимации в диапазоне от 0 до 1
-      var progress = time / animationDuration;
-      // Применяем логарифмическую функцию для замедления
-      var position = initialPosition + (targetPosition - initialPosition) * Math.log(1 + progress * 9);
-      return position;
-    }
-
     obj.children[0].position.x >0? obj.children[0].position.x = calculatePosition(time/10):null
-
 
   })
 
-
-  
 
   return <primitive ref={ref} object={obj} scale={2.2} position={[0, 0, 0]} />;
 };

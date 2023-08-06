@@ -1,7 +1,7 @@
 export default function CvBtn (){
     return(
     <div className="
-        relative z-[0]
+        relative z-[9991]
         group/btn
         flex flex-row justify-center items-center
         bg-transparent
@@ -12,7 +12,7 @@ export default function CvBtn (){
         ease-out
         overflow-shown   
         ">
-        <div className="relative z-[1] bg-blue w-[100%] h-[300%]
+        <div className="relative z-[9992] bg-blue w-[100%] h-[300%]
         transform-gpu
         transition-all
         duration-500
@@ -23,15 +23,15 @@ export default function CvBtn (){
 
         "></div> 
 
-        <p className="absolute z-[2] text-blue group-hover/btn:text-[white] text-lg">Get CV</p>
+        <p className="absolute z-[9993] text-blue group-hover/btn:text-[white] text-lg">Get CV</p>
 
-        <div className="
+        <div style={{willChange:'transform'}} className="
             group/note
             block
             rotate-[0deg]
             pointer-events-none
             shadow-[0_35px_0px_25px_rgba(23,25,26,1)]
-            fixed z-[9999] h-[80vh] w-[20vw] bg-darkGreen 
+            fixed z-[-9999] h-[80vh] w-[20vw] bg-darkGreen 
             transform-gpu transition-all duration-500
             origin-bottom-left
             top-[10vh] right-[-22vw]
@@ -39,7 +39,7 @@ export default function CvBtn (){
             group-hover/btn:top-[20vh]    group-hover/btn:right-[-20vw] group-hover:rotate-[-20deg] group-hover/btn:block
 
             "> 
-                <p className="text-3xl text-lightPrimary">Resume</p>
+                <p className="text-3xl relative z-[2] text-lightPrimary">Resume</p>
             </div>
     </div>
     )

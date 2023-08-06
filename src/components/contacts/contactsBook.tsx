@@ -4,6 +4,8 @@ import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import Contacts from '../websiteCard';
 import Contact from "./contact";
+import Image from "next/image";
+
 
 export default function ContactsBook() {
 
@@ -47,9 +49,8 @@ let isFirstRender = useRef(true)
             gsap.to('#page',{
                 delay:0.3,
                 repeat:0,
-                // color: '#f08441',
                 opacity:1,
-                duration:1,
+                duration:2,
 
                 onComplete:()=> console.log('animation ended')
             })
@@ -66,10 +67,10 @@ let isFirstRender = useRef(true)
             {/* <main className='mt-[30vh] relative h-[500px] bg-green w-[500px]'> */}
                 <img className ='absolute z-[2] object-fill p-[0] h-[min] w-[30vw]' src="/book2.svg" ></img>
 
-                <article id='page' className="absolute opacity-0 flex flex-col content-start items-start  bg-transparent opacity-[1] h-[30vw] z-[9998] w-[26vw]  
+                <article id='page' className="absolute opacity-[0] flex flex-col content-start items-start  bg-transparent h-[30vw] z-[9998] w-[26vw]  
                 skew-x-[-2deg] ">
                     {/* <h1 className= 'relative self-center text-[2vw] m-0 text-bg700 '>Contacts</h1> */}
-                    <ul className="pl-[3vmin] text-lightSecondary font-semibold mb-[20vh] h-[100%] w-[100%]">
+                    <ul  className="pl-[3vmin]  text-lightSecondary font-semibold mb-[20vh] h-[100%] w-[100%]">
 
 
                         <h1 className= ' ml-[5vw]  mb-[2vw] text-[3vw] text-bg200 opacity-[0.7] '>Contacts</h1>
@@ -87,6 +88,8 @@ let isFirstRender = useRef(true)
                     <p id='bookLabel' className = 'absolute top-[10%] left-[0] right-[0] z-[999] text-center text-lightPrimary text-6xl'>Cebinae</p>
                     
                 </div>
+
+                <img className="absolute right-[0] bottom-[5vh] z-[998] h-[100vh] w-[30vw]" src='/lamp.png' alt='lamp' width={400} height={700}></img>
                             
         </div>
     )

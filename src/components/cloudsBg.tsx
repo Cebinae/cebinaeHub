@@ -36,10 +36,10 @@ export default function CloudsBg() {
           img.id = `cloud${id}${thread}`
           img.className = `animate-cloudsToRight`
           img.style.zIndex = id
-          img.style.position = 'absolute'
+          img.style.position = 'relative'
           img.style.left = `-${width*1.5}px`
           img.style.willChange = 'transform'
-          img.style.top = `3${top}0vh`
+          img.style.top = `-${top}0%`
           img.style.transform = 'translateZ(0)'
           img.src = `/clouds/${getRandomInt(1, 10).toString()}.svg`
           return img
