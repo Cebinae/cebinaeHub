@@ -12,10 +12,28 @@ export default function ContactsBook() {
 const orange = '#ffb661'
 const darkOrange = '#f08441'
 
-
+let getRandomInt =(min:number, max:number)=> {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min //Максимум не включается, минимум включается
+}
 
 let isFirstRender = useRef(true)
 
+let runEmission = (delay:number)=>{
+    gsap.to('#emission',{
+        delay:0.1,
+        opacity:0,
+        duration:0.2,
+        yoyo:true,
+        repeat:0,
+        repeatDelay:delay,
+        onComplete:()=>{
+            gsap.killTweensOf('#emission')
+            runEmission(getRandomInt(1, 9))
+        }
+    })
+}
 
     useEffect(()=>{
 
@@ -60,13 +78,29 @@ let isFirstRender = useRef(true)
 
                 onComplete:()=> console.log('animation ended')
             })
+
+            // runEmission(getRandomInt(1,9))
+
+            gsap.fromTo('#emission',{
+                opacity:0,
+            },{
+                delay:1.5,
+                duration:0.2,
+                opacity:0.3,
+                repeat:0
+            })
+            
         }
+
+   
 
         isFirstRender.current? runAnimation():null
         
     },
     [])
 //list of layers in public/book.psd
+
+
 
     return(
         <div style={{perspective:'130%'}} className="bg-bg700 top-[-10vh]  h-[100vh] w-[100vw] flex flex-col justify-center items-center">
@@ -98,8 +132,11 @@ let isFirstRender = useRef(true)
 
 
                 <div className="fixed right-[-5vw] mt-[10vh] bottom-[5vh] z-[999] h-[90vh] w-[40vw]">
-                <img className="fixed right-[-5vw] mt-[10vh] bottom-[5vh] z-[999] h-[90vh] w-[40vw]" src='/lamp/lamp2.png' alt='lamp' width={400} height={700}></img>
-                <Image  src='/lamp/emission.png' width={400} height={400} alt='light'></Image>  
+
+                    <div className=" fixed h-[100%] w-[100%]">
+                        <img className="relative right-[-5vw] mt-[10vh] bottom-[5vh] z-[99998] h-[90vh] w-[40vw]" src='/lamp/lamp2.png' alt='lamp' width={400} height={700}></img>
+                        <Image id='emission' className=" absolute opacity-[0] h-[80%] left-[-40%] top-[13%] w-[60%] z-[91] top-[0]" src='/lamp/emission.png' width={400} height={400} alt='light'></Image>  
+                    </div>
                 </div>
         </div>
     )
