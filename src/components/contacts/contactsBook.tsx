@@ -95,8 +95,12 @@ let isFirstRender = useRef(true)
                     
                 </div>
 
-                <img className="fixed right-[-5vw] mt-[10vh] bottom-[5vh] z-[999] h-[90vh] w-[40vw]" src='/lamp.png' alt='lamp' width={400} height={700}></img>
-                            
+
+
+                <div className="fixed right-[-5vw] mt-[10vh] bottom-[5vh] z-[999] h-[90vh] w-[40vw]">
+                <img className="fixed right-[-5vw] mt-[10vh] bottom-[5vh] z-[999] h-[90vh] w-[40vw]" src='/lamp/lamp2.png' alt='lamp' width={400} height={700}></img>
+                <Image  src='/lamp/emission.png' width={400} height={400} alt='light'></Image>  
+                </div>
         </div>
     )
 }

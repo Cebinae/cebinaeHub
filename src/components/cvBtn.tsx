@@ -12,7 +12,7 @@ export default function CvBtn (){
         ease-out
         overflow-shown   
         ">
-        <div className="relative z-[9992] bg-blue w-[100%] h-[300%]
+        <div style={{willChange:'transform'}} className="relative z-[9992] bg-blue w-[100%] h-[300%]
         transform-gpu
         transition-all
         duration-500

@@ -1,5 +1,5 @@
 import AndroidObj from "../androidObj/androidObj";
-import SecondPhone from "../phoneObg/phoneObj";
+import SecondPhone from "../phoneObj/phoneObj";
 
 export default function SkinhunterFirst() {
     return(

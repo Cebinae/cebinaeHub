@@ -26,7 +26,7 @@ Pm 0.080000
 adobe_density 1.000000
 adobe_translucence 0.000000
 adobe_glow 0.000000
-map_Kd Cell.png
+map_Kd Camara.svg
 
 newmtl Blanco
 Ka 0.541 0.831 0.263
@@ -41,11 +41,11 @@ Pm 0.080000
 adobe_density 1.000000
 adobe_translucence 0.000000
 adobe_glow 0.000000
-map_Kd Cell.png
+map_Kd Blanco.svg
 
 newmtl Emission
 Ka 0.000000 0.000000 0.000000
-Kd 0.800000 0.800000 0.800000
+Kd 0.541 0.831 0.263
 Ks 0.000000 0.000000 0.000000
 adobe_interior_color 0.784314 0.784314 0.784314
 Ns 2.000000
@@ -57,5 +57,5 @@ adobe_density 1.000000
 adobe_translucence 0.000000
 adobe_glow 0.000000
 map_Kd EmissionMain.jpg 
-adobe_map_Sphere_Environment Cell.png
+adobe_map_Sphere_Environment Emission - EmissionBg.svg
 
