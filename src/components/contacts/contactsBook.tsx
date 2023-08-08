@@ -115,11 +115,11 @@ let runEmission = (delay:number)=>{
 
                         <h1 className= ' ml-[5vw]  mb-[2vw] text-[3vw] text-bg200 opacity-[0.7] '>Contacts</h1>
 
-                        <Contact label="LinkedIn" linkText="linkedin.com/in/ilya-belobrov"></Contact>
-                        <Contact label="Github" linkText="github.com/Cebinae"></Contact>
-                        <Contact label="Email" linkText="ilyabelobrovhaha@gmail.com"></Contact>
-                        <Contact label="Cell & Telegram" linkText="098 046 72 63"></Contact>
-                        <Contact label="Telegram" linkText="t.me/cebinae"></Contact>
+                        <Contact label="LinkedIn" linkText="linkedin.com/in/ilya-belobrov" link="http://linkedin.com/in/ilya-belobrov"></Contact>
+                        <Contact label="Github" linkText="github.com/Cebinae" link="http://github.com/Cebinae" ></Contact>
+                        <Contact label="Email" linkText="ilyabelobrovhaha@gmail.com" link="mailto:ilyabelobrovhaha@gmail.com"></Contact>
+                        <Contact label="Cell & Telegram" linkText="098 046 72 63" link="tel:0980467263"></Contact>
+                        <Contact label="Telegram" linkText="t.me/cebinae" link="http://t.me/Cebinae"></Contact>
                     </ul>               
                 </article>
 

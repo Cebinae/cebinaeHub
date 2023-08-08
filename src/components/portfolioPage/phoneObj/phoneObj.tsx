@@ -71,7 +71,7 @@ const animate = (time:number)=>{
 
   useFrame(({clock}, state, delta)=>{ 
 
-    // console.log('LOOP IS STILL RUNNING')
+    console.log('LOOP IS STILL RUNNING')
     let time = clock.getElapsedTime()
     // console.log(state);
     shouldUpdate?animate(time):null
@@ -116,8 +116,8 @@ export default function SecondPhone() {
 
   return (
     <div ref={ref} style={{willChange:'transform'}} className="bg-bg400 h-[80vh] w-[61vw]">
-      <Canvas ref={canvasRef} frameloop="always">
-
+      <Canvas invalidateFrameloop  frameloop="always" ref={canvasRef}>
+      
        {/* {!shouldUpdate? <DisableRender></DisableRender>:null} */}
       {/* <axesHelper args={[15]} /> */}
         <Suspense fallback={null}>
