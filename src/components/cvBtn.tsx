@@ -1,6 +1,8 @@
+
+
 export default function CvBtn (){
     return(
-    <div className="
+    <a href={'/CV4.pdf'} download={'Cebinae_Ilya_Bielorov_CV'} className="
         relative z-[9991]
         group/btn
         flex flex-row justify-center items-center
@@ -41,7 +43,7 @@ export default function CvBtn (){
             "> 
                 <p className="text-3xl absolute z-[2] text-lightPrimary">Resume</p>
             </div>
-    </div>
+    </a>
     )
 }
 

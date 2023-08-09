@@ -1,4 +1,4 @@
-import AndroidObj from "../androidObj/androidObj";
+// import AndroidObj from "../androidObj/androidObj";
 import SecondPhone from "../phoneObj/phoneObj";
 // import PhoneScene from "../phoneScene";
 
@@ -16,8 +16,9 @@ export default function SkinhunterFirst() {
             <article>
                 {/* <p className="text-lg text-lightPrimary ml-[3vw] mt-[1vh]" >is a pet-project with a real commercial use</p> */}
                 <p className="text-lg text-lightSecondary w-[53vw] ml-[3vw] mt-[5vh] ml-[3vw]">
-                is a pet-project with a real commercial use. The main purpose of this application is to provide ecnanced tool for trading CS:GO skins on the most popular marketplace of csgo 
-                    ecosystem - Dmarket.com. Depending on personal strategy, it will either save your time or increase incomes by giving a significant 
+                is a pet-project with a real commercial use. The main purpose of this application is to provide an infinite monitoring of marketplace
+                according to configuration
+                and instantly notificate user when a profitable offer was found
                    
                 </p>
             </article>
@@ -40,7 +41,7 @@ export default function SkinhunterFirst() {
 
             <div className="absolute z-[-1] bottom-[10vh] right-[0]">
                 {/* <AndroidObj></AndroidObj> */}
-                {/* <SecondPhone></SecondPhone> */}
+                <SecondPhone></SecondPhone>
                 {/* <PhoneScene></PhoneScene> */}
             </div>
 
