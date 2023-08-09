@@ -1,7 +1,7 @@
 import ArrowDown from '@/components/buttonDown'
 import Education from '@/components/eduSection'
 import Greeting from '@/components/greeting'
-import StarsBg from '@/components/staryBg'
+import StarsBg from '@/components/technologies'
 import Image from 'next/image'
 import React from 'react'
 

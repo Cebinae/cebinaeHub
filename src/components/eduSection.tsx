@@ -1,7 +1,7 @@
 // import Carousel from "./carousel";
 import EduNote from "./eduPage/eduNote";
 import Carousel from "./eduPage/gallery";
-
+import { Suspense } from "react";
 import { gsap } from "gsap/gsap-core"
 
 export default function Education() {
@@ -12,7 +12,9 @@ export default function Education() {
 
             <section className="block w-[40vw] h-[100vh] ml-[5vw]  flex-1 flex flex-col justify-around">
                 <div className="bg-transparent h-[35vh] w-[40vw]">
-                    <Carousel></Carousel>
+                    <Suspense>
+                        <Carousel></Carousel>
+                    </Suspense>
                 </div>
 
                 <div>
@@ -28,7 +30,7 @@ export default function Education() {
             </section>
 
             <section className="relative w-[50vw] h-[100vh] flex flex-row justify-end">
-                <div className="absolute w-[50vw] h-[min]">
+                <div className="absolute w-[50vw] h-[100vh]">
                 {/* rotate-[-20deg] */}
                     <EduNote></EduNote>
                 </div>

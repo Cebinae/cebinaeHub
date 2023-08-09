@@ -154,6 +154,27 @@ module.exports = {
                       '100%':{
                         transform: 'translateX(0)'     
                       }
+                    },
+
+                    btnDownloadCollapse:{
+                      '0%':{
+                        width:'50%'
+                      },
+                      '100%':{
+                        // flex:0,
+                        width:'0%',
+                        
+                      }      
+                      },
+                    btnReveal:{
+                        '0%':{
+                          width:'0%'
+                        },
+                        '100%':{
+                          // flex:0,
+                          width:'50%',
+                          
+                        },
                     }
               
               }
@@ -170,7 +191,10 @@ module.exports = {
       stars1: 'stars1 3s ease-in-out infinite 2s',
       stars2: 'stars2 3s ease-in-out infinite 3s',
       stars3: 'stars3 3s ease-in-out infinite 4s',
-      eduNote: 'eduNote 3s ease-in-out'
+      eduNote: 'eduNote 3s ease-in-out',
+      btnCollapse: 'btnDownloadCollapse 0.3s linear',
+      btnReveal: 'btnReveal 0.3s linear'
+
     },
     colors:{
       'green': '#8dd294',

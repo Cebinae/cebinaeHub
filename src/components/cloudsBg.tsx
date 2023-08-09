@@ -1,14 +1,16 @@
 'use client'
 import React from 'react'
 import Plane from './plane/plane'
-import websiteCard from './websiteCard'
 import WebsiteCard from './websiteCard'
 import { useRef, useState } from 'react'
-
+import ActionsBtn from './portfolioPage/projectActionsBtn'
+import { useRouter } from 'next/navigation'
 
 export default function CloudsBg() {
-  
+    const router = useRouter();
     let isFirstRender = React.useRef(true)
+    let btnFirstRender = useRef(true)
+
     let isFocused = React.useRef(true)
     let isRunning = React.useRef(false)
 
@@ -16,6 +18,7 @@ export default function CloudsBg() {
     let [planeVisible, setPlane] = useState(false)
   
     React.useEffect(()=>{
+      btnFirstRender.current=true
 
       let cachedRef = bgRef.current
 
@@ -122,23 +125,31 @@ export default function CloudsBg() {
 
 
       
-  
-  
+      
+      // bcs animation logic depends on if first render or not, see props usage
+      //it breaks after route chage bcs ref persists state on return to this page
+      //so now i refresh btnFirstRender to prevent unwanted animation triggered by !planeVisible&&!firstRender
+
       return ()=>{
         window.removeEventListener('blur', ()=>isFocused.current = false)
         window.removeEventListener('focus', ()=>isFocused.current = true)
+        console.log('route change')
+        btnFirstRender.current=true
       }
   
   
     }, [])
   
   
-  
     return (
       
-      <main ref={bgRef} className='absolute flex flex-row justify-center items-start h-[100vh] w-[100vw] bg-bg1000 overflow-hidden' id='animatedBg'>
+      <main ref={bgRef} className='relative z-[1] flex flex-row justify-center items-start h-[100vh] w-[100vw] bg-bg400 overflow-hidden' id='animatedBg'>
           {/* <Plane width={800}></Plane> */}
           {planeVisible?<Plane width={500}></Plane>:null}
+          {/* {btnFirstRender.current=true} */}
+
+          <ActionsBtn isCebinaeHub={planeVisible} isFirstRender={btnFirstRender.current}></ActionsBtn>
+          {btnFirstRender.current=false}
           <WebsiteCard></WebsiteCard>
       </main>
             

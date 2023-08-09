@@ -22,8 +22,10 @@ const [visible, setVisible] = useState(false)
     },[])
 
     return(
-        <div ref={currElem}>
+        <>
+        <div id='trigger' className="absolute w-[1px] h-[1px] z-[9999] top-[35vh]"  ref={currElem}></div>
+
             {visible? <Note></Note> : null }
-        </div>
+        </>
     )
 }

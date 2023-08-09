@@ -85,7 +85,7 @@ let runEmission = (delay:number)=>{
                 opacity:0,
             },{
                 delay:1.5,
-                duration:0.2,
+                duration:0.4,
                 opacity:0.3,
                 repeat:0
             })
@@ -131,9 +131,9 @@ let runEmission = (delay:number)=>{
 
 
 
-                <div className="fixed right-[-5vw] mt-[10vh] bottom-[5vh] z-[999] h-[90vh] w-[40vw]">
+                <div className="fixed right-[-5vw] mt-[20vh]  z-[999] h-[80vh] w-[40vw]">
 
-                    <div className=" fixed h-[100%] w-[100%]">
+                    <div className=" bottom-[0] fixed h-[90%] w-[100%]">
                         <img className="relative right-[-5vw] mt-[10vh] bottom-[5vh] z-[99998] h-[90vh] w-[40vw]" src='/lamp/lamp2.png' alt='lamp' width={400} height={700}></img>
                         <Image id='emission' className=" absolute opacity-[0] h-[80%] left-[-40%] top-[13%] w-[60%] z-[91] top-[0]" src='/lamp/emission.png' width={400} height={400} alt='light'></Image>  
                     </div>

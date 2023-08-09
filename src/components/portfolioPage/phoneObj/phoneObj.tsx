@@ -1,7 +1,7 @@
 'use client'
 
 import * as THREE from "three";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useLoader } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
@@ -10,7 +10,7 @@ import { DDSLoader } from "three-stdlib";
 import { Suspense } from "react";
 import {useRef, useState, useEffect } from 'react'
 import {Stage, AdaptiveDpr, Bvh} from '@react-three/drei'
-
+import { MeshBasicMaterial } from "three";
 
 
 THREE.DefaultLoadingManager.addHandler(/\.dds$/i, new DDSLoader());
@@ -24,8 +24,8 @@ const Scene = (props:{isVisible:boolean}) => {
 
   //sad. all is fine but camera at 35. have to try 40.
 
-    const materials = useLoader(MTLLoader, "/newobj2056/Phone.mtl");
-    const obj = useLoader(OBJLoader, "/newobj2056/Phone.obj", (loader) => {
+    const materials = useLoader(MTLLoader, "/obj2056newtexture/Phone.mtl");
+    const obj = useLoader(OBJLoader, "/obj2056newtexture/Phone.obj", (loader) => {
       materials.preload();
       loader.setMaterials(materials);
     });
@@ -51,6 +51,12 @@ const Scene = (props:{isVisible:boolean}) => {
     let initialPosition = 5;
     let targetPosition = 1;
     let animationDuration = 3; //
+
+
+   let {scene} = useThree()
+  //  scene.overrideMaterial = new MeshBasicMaterial({ color: "green" });
+  //  console.log(obj)
+
 
 function calculatePosition(time:any) {
   // Рассчитываем прогресс анимации в диапазоне от 0 до 1
@@ -116,7 +122,7 @@ export default function SecondPhone() {
 
   return (
     <div ref={ref} style={{willChange:'transform'}} className="bg-bg400 h-[80vh] w-[61vw]">
-      <Canvas invalidateFrameloop  frameloop="always" ref={canvasRef}>
+      <Canvas  ref={canvasRef}>
       
        {/* {!shouldUpdate? <DisableRender></DisableRender>:null} */}
       {/* <axesHelper args={[15]} /> */}

@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Dot from "./starDot"
-import LogosSection from "././logosSection/logosAppear"
+import LogosSection from "./logosSection/logosAppear"
 import Saggitarius from "./starsSection/saggitarius"
 import { useEffect } from "react"
 import dynamic from "next/dynamic"
@@ -10,7 +10,7 @@ import dynamic from "next/dynamic"
 export default function StarsBg() {
 
     const LogosNoSsr = dynamic(
-        () => import("././logosSection/logosAppear"),
+        () => import("./logosSection/logosAppear"),
         { ssr: false }
       )
 
