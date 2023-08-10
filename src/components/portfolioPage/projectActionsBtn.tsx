@@ -19,7 +19,7 @@ export default function ActionsBtn (props:{isCebinaeHub?:boolean, isFirstRender?
                     {/* {console.log('isfirt', props.isFirstRender)} */}
                     <p>Download</p>
             </button>
-            <button className="flex-1 rounded-r-xl bg-darkOrange hover:bg-[#c26e3a] ">
+            <button style={{willChange:'transform'}} className="flex-1 rounded-r-xl bg-darkOrange hover:bg-[#c26e3a] ">
                 <p>GitHub</p>
             </button>
         </div>

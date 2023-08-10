@@ -123,7 +123,7 @@ let runEmission = (delay:number)=>{
                 </article>
 
                 <div id='bookwrapper' className="relative z-[9999]">
-                    <Image priority={true} alt="cebinae" height={500} width={500} className ='relative z-[998] top-[-3%] object-cover w-[30vw] opacity-[1]' src="/bookwrapper2.svg" ></Image>
+                    <Image priority={true} alt="" height={500} width={500} className ='relative z-[998] top-[-3%] object-cover w-[30vw] opacity-[1]' src="/bookwrapper2.svg" ></Image>
                     <p id='bookLabel' className = 'absolute top-[10%] left-[0] right-[0] z-[999] text-center text-lightPrimary text-6xl'>Cebinae</p>
                     
                 </div>

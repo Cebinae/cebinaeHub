@@ -163,13 +163,14 @@ module.exports = {
                       '100%':{
                         // flex:0,
                         width:'0%',
+                        display:'none'
                         
                       }      
                       },
                     btnReveal:{
-                        '0%':{
-                          width:'0%'
-                        },
+                        // '0%':{
+                        //   width:'0%'
+                        // },
                         '100%':{
                           // flex:0,
                           width:'50%',
