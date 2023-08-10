@@ -6,6 +6,8 @@ import LogosSection from "./logosSection/logosAppear"
 import Saggitarius from "./starsSection/saggitarius"
 import { useEffect } from "react"
 import dynamic from "next/dynamic"
+import { Suspense } from "react"
+
 
 export default function StarsBg() {
 
@@ -39,8 +41,9 @@ export default function StarsBg() {
                 </article>
                 
             </main>
-
-            <Saggitarius></Saggitarius>
+            <Suspense>
+                <Saggitarius></Saggitarius>
+            </Suspense>
         </section>
     )
 }

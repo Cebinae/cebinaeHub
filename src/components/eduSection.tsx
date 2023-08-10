@@ -32,7 +32,9 @@ export default function Education() {
             <section className="relative w-[50vw] h-[100vh] flex flex-row justify-end">
                 <div className="absolute w-[50vw] h-[100vh]">
                 {/* rotate-[-20deg] */}
+                <Suspense>
                     <EduNote></EduNote>
+                </Suspense>
                 </div>
             </section>
 

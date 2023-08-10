@@ -143,7 +143,7 @@ export default function CloudsBg() {
   
     return (
       
-      <main ref={bgRef} className='relative z-[1] flex flex-row justify-center items-start h-[100vh] w-[100vw] bg-bg400 overflow-hidden' id='animatedBg'>
+      <main ref={bgRef} className='relative z-[1] flex flex-row justify-center  h-[100vh] w-[100vw] bg-bg400 overflow-hidden' id='animatedBg'>
           {/* <Plane width={800}></Plane> */}
           {planeVisible?<Plane width={500}></Plane>:null}
           {/* {btnFirstRender.current=true} */}
