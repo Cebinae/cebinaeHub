@@ -4,7 +4,7 @@ export default function ActionsBtn (props:{isCebinaeHub?:boolean, isFirstRender?
 
     return (
         <div className={wrapperClass}>
-            <button style={{animationFillMode:'forwards'}} 
+            <button style={{animationFillMode:'forwards', willChange:'transform'}} 
                 className={`  rounded-l-xl  w-[50%]'
                 ${props.isFirstRender? 'w-[50%]':'w-[0%]'}         
                 ${props.isCebinaeHub? 'animate-btnCollapse ' :'bg-darkOrange '} hover:bg-[#d67a40]
