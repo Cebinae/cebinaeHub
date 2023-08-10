@@ -75,12 +75,8 @@ const animate = (time:number)=>{
     
 }
 
-  useFrame(({clock}, state, delta)=>{ 
-
-    console.log('LOOP IS STILL RUNNING')
-    let time = clock.getElapsedTime()
-    // console.log(state);
-    shouldUpdate?animate(time):null
+  useFrame(({clock})=>{ 
+    shouldUpdate?animate(clock.getElapsedTime()):null
   })
 
 
