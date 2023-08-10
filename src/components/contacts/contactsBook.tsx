@@ -106,6 +106,12 @@ let runEmission = (delay:number)=>{
             {/* <main className='mt-[30vh] relative h-[500px] bg-green w-[500px]'> */}
                 <img className ='absolute z-[2] object-fill p-[0] h-[min] w-[30vw]' src="/book2.svg" ></img>
 
+                <div id='bookwrapper' className="relative z-[9999]">
+                    <Image priority={true} alt="" height={500} width={500} className ='relative z-[998] top-[-3%] object-cover w-[30vw] opacity-[1]' src="/bookwrapper2.svg" ></Image>
+                    <p id='bookLabel' className = 'absolute top-[10%] left-[0] right-[0] z-[999] text-center text-lightPrimary text-6xl'>Cebinae</p>
+                    
+                </div>
+
                 <article id='page' className="absolute opacity-[0] flex flex-col content-start items-start  bg-transparent h-[30vw] z-[9998] w-[26vw]  
                 skew-x-[-2deg] ">
                     {/* <h1 className= 'relative self-center text-[2vw] m-0 text-bg700 '>Contacts</h1> */}
@@ -122,11 +128,7 @@ let runEmission = (delay:number)=>{
                     </ul>               
                 </article>
 
-                <div id='bookwrapper' className="relative z-[9999]">
-                    <Image priority={true} alt="" height={500} width={500} className ='relative z-[998] top-[-3%] object-cover w-[30vw] opacity-[1]' src="/bookwrapper2.svg" ></Image>
-                    <p id='bookLabel' className = 'absolute top-[10%] left-[0] right-[0] z-[999] text-center text-lightPrimary text-6xl'>Cebinae</p>
-                    
-                </div>
+                
 
 
 
