@@ -9,8 +9,9 @@ export default function SkinhunterFirst() {
     return(
         <div className="w-[100vw] relative z-[1] h-[100vh] bg-bg400  flex flex-col justify-start align-start ">
 
+        <main className="z-[999] absolute h-[100vh]">
             <div>
-                <h1 className="text-9xl text-lightPrimary mt-[14vh] ml-[3vw]">SkinHunter</h1>
+                <h1 className=" relative text-9xl text-lightPrimary mt-[14vh] ml-[3vw]">SkinHunter</h1>
             </div>
 
             <article>
@@ -38,12 +39,13 @@ export default function SkinhunterFirst() {
 
                 </p>
             </article>
-
-            <div className="absolute z-[-1] bottom-[10vh] right-[0]">
+            </main>
+            <div className="absolute z-[1] bottom-[10vh] bg-green right-[0]">
                 {/* <AndroidObj></AndroidObj> */}
                 <SecondPhone></SecondPhone>
                 {/* <PhoneScene></PhoneScene> */}
             </div>
+        
 
         </div>
     )

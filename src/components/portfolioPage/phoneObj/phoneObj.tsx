@@ -18,7 +18,7 @@ THREE.DefaultLoadingManager.addHandler(/\.dds$/i, new DDSLoader());
 var shouldUpdate = true    // necessary to link 2 components, props dont work here, redux would be slow in loop
 
 
-const Scene = (props:{isVisible:boolean}) => {
+const Scene = (props:{isVisible?:boolean}) => {
   // IMPORTANT!!! obj35, 30, 50... there are same models with different percent of polygons. Reduced in photoshop.
   // 100% way to laggy, but 30 look like crap. Seems like 35 is best. Still to test and decide...
 
@@ -53,7 +53,7 @@ const Scene = (props:{isVisible:boolean}) => {
     let animationDuration = 3; //
 
 
-   let {scene} = useThree()
+  //  let {scene} = useThree()
   //  scene.overrideMaterial = new MeshBasicMaterial({ color: "green" });
   //  console.log(obj)
 
@@ -91,7 +91,7 @@ const animate = (time:number)=>{
 
 
 
-const DisableRender = () => useFrame(() => console.log('outer renderer'))
+// const DisableRender = () => useFrame(() => console.log('outer renderer'))
 
 
 export default function SecondPhone() {
@@ -105,12 +105,12 @@ export default function SecondPhone() {
             entries.forEach((entry) => {
               let visible=()=>{
                 shouldUpdate = true
-                console.log('INTERSECTING', canvasRef.current)
+                // console.log('INTERSECTING', canvasRef.current)
                 
               }
               let hidden=()=>{
                 shouldUpdate = false
-                console.log('NOT INTERSECTING')
+                // console.log('NOT INTERSECTING')
               }
               entry.isIntersecting? visible(): hidden()
             });
@@ -121,16 +121,23 @@ export default function SecondPhone() {
 
 
   return (
-    <div ref={ref} style={{willChange:'transform'}} className="bg-bg400 h-[80vh] w-[61vw]">
-      <Canvas  ref={canvasRef}>
+    <div ref={ref} style={{willChange:'transform'}} className="bg-bg400 h-[80vh] w-[61vw] z-[1]">
+      <Canvas 
+      //  ref={canvasRef}
+      // dpr={0.8}
+      
+       >
+
       
        {/* {!shouldUpdate? <DisableRender></DisableRender>:null} */}
       {/* <axesHelper args={[15]} /> */}
         <Suspense fallback={null}>
-            <ambientLight intensity={2}></ambientLight>
+            {/* <ambientLight intensity={2}></ambientLight> */}
 
           {/* <Bvh firstHitOnly> */}
-            <Scene isVisible={focused.current}/>
+            <Scene 
+            isVisible={focused.current}
+            />
           {/* </Bvh> */}
 
           {/* <OrbitControls /> */}

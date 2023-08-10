@@ -1,4 +1,6 @@
 import FeatureCard from "@/components/featureCard"
+import Carousel from "@/components/carousel"
+
 
 export default function SkinhunterSecond (){
     return(
@@ -14,12 +16,12 @@ export default function SkinhunterSecond (){
             <main className="absolute flex flex-row justify-around bg-green ml-[auto] mr-[auto] mt-[5vh] h-[60vh] w-[100vw]">
 
 
+                {/* <FeatureCard></FeatureCard>
                 <FeatureCard></FeatureCard>
                 <FeatureCard></FeatureCard>
-                <FeatureCard></FeatureCard>
+ */}
 
-
-
+                {/* <Carousel></Carousel> */}
 
 
 

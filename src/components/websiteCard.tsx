@@ -4,7 +4,7 @@ export default function WebsiteCard() {
 
     return(
     <>
-        <h1 className="absolute left-[3vw] text-9xl mt-[10vh] text-lightPrimary">CebinaeHub</h1>
+        <h1 className="absolute left-[3vw] z-[9999] text-9xl mt-[10vh] text-lightPrimary">CebinaeHub</h1>
         <main className="absolute bottom-[5vh] rotate-0 z-[9999] h-[65vh] w-[60vw] bg-bg700 flex flex-col justify-start items-center opacity-[0.5]">
             <article className="flex flex-col h-[65vh] w-[50vw] justify-evenly">
                 <p>
