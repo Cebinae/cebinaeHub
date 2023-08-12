@@ -8,7 +8,7 @@ export default function Education() {
     return(
 
 
-        <main className="w-full h-full bg-bg700 overflow-hidden flex flex-row justify-between" id="eduSection">
+        <main className="w-full h-full bg-bg700 overflow-shown flex flex-row justify-between" id="eduSection">
 
             <section className="block w-[40vw] h-[100vh] ml-[5vw]  flex-1 flex flex-col justify-around">
                 <div className="bg-transparent h-[35vh] w-[40vw]">

@@ -17,6 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      {/* <style jsx global>{`
+        html {
+          font-family: ${inter.style.fontFamily};
+        }
+      `}</style> */}
       <body className= 'bg-bg400'>
         <header className='sticky z-[999] w-full h-min top-0 flex justify-center'>
           <Header></Header>

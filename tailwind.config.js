@@ -176,6 +176,32 @@ module.exports = {
                           width:'50%',
                           
                         },
+                    },
+                    cardPrimary:{
+                      from:{                          
+                        transform: 'rotateY(0deg)',
+                    },
+                      to:{
+                          transform: 'rotateY(180deg)',
+                          // display:'none',
+                          // pointerEvents:'none',
+                          // animationPlayState:"paused",
+                        
+                          // backfaceVisibility:'hidden'
+                      }
+                    },
+                    cardSecondary:{
+                      '0%':{
+                        transform: 'rotateY(180deg)',
+                      },
+                      '100%':{
+                          transform: 'rotateY(0deg)',
+                          // display:'none',
+                          // pointerEvents:'none',
+                          // animationPlayState:"paused",
+                        
+                          // backfaceVisibility:'hidden'
+                      }
                     }
               
               }
@@ -194,7 +220,9 @@ module.exports = {
       stars3: 'stars3 3s ease-in-out infinite 4s',
       eduNote: 'eduNote 3s ease-in-out',
       btnCollapse: 'btnDownloadCollapse 0.3s linear',
-      btnReveal: 'btnReveal 0.3s linear'
+      btnReveal: 'btnReveal 0.3s linear',
+      cardPrimary: 'cardPrimary 1s ease ',
+      cardSecondary: 'cardSecondary 0.3s forwards',
 
     },
     colors:{
@@ -222,5 +250,6 @@ module.exports = {
   },
 
   plugins: [ 
+    require('tailwindcss-3d')({ legacy: true }),
   ],
   }

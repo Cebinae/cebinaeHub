@@ -7,6 +7,8 @@ import SkinhunterFirst from "@/components/portfolioPage/screens/skinhunter"
 import CloudsBg from "@/components/cloudsBg"
 import StarsBg from "@/components/technologies"
 import Greeting from "@/components/greeting"
+import CebinaeHub from "@/components/portfolioPage/screens/cebinaeHub"
+
 
 export default function PortfolioPage() {
     return (
@@ -17,9 +19,10 @@ export default function PortfolioPage() {
             {/* <AndroidObj></AndroidObj> */}
             <SkinhunterFirst></SkinhunterFirst> 
             <SkinhunterSecond></SkinhunterSecond>
+            <CebinaeHub></CebinaeHub>
             {/* <Greeting></Greeting>
             <StarsBg></StarsBg> */}
-            <CloudsBg></CloudsBg>
+            {/* <CloudsBg></CloudsBg> */}
             {/* <ActionsBtn></ActionsBtn> */}
         </div>
     )
