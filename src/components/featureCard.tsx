@@ -1,3 +1,4 @@
+import Image from "next/image"
 
 export default function FeatureCard(props:{
     imgPrimary?:string, 
@@ -20,7 +21,7 @@ export default function FeatureCard(props:{
         }} className="w-[20vw]  group-hover:animate-cardPrimary animate-cardSecondary relative h-[65vmin] rounded-xl ">
 
 
-            <img style={{
+            <Image style={{
                 // // animationFillMode:"forwards",
                 // transformStyle:'preserve-3d',
                 // perspective:'1000px',
@@ -29,12 +30,12 @@ export default function FeatureCard(props:{
                 animationDuration:'1s',
 
 
-                }} src="/logged.png" 
+                }} src="/logged.png" alt=''
                 className=" absolute z-[1] w-[100%] h-[100%] rounded-3xl" height={300} width={300}>
-            </img>
+            </Image>
             
 
-            <img style={{
+            <Image style={{
                 // animationFillMode:"forwards",
                 // transformStyle:'preserve-3d',
                 // perspective:'1000px',
@@ -45,9 +46,9 @@ export default function FeatureCard(props:{
 
 
 
-                }} src="/wrongKeys.png" 
+                }} src="/wrongKeys.png" alt=""
                 className=" absolute z-[2]  w-[100%] h-[100%] rounded-3xl" height={300} width={300}>
-            </img>
+            </Image>
             
 
 
