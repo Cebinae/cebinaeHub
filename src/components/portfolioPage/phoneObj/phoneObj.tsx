@@ -11,69 +11,118 @@ import { Suspense } from "react";
 import {useRef, useState, useEffect } from 'react'
 import {Stage, AdaptiveDpr, Bvh} from '@react-three/drei'
 import { MeshBasicMaterial } from "three";
+import { resolve } from "path";
 
 
 THREE.DefaultLoadingManager.addHandler(/\.dds$/i, new DDSLoader());
 
-var shouldUpdate = true    // necessary to link 2 components, props dont work here, redux would be slow in loop
+var shouldUpdate = true    // necessary to link 2 components, props dont work here, redux would be slow in a loop
 
 
 const Scene = (props:{isVisible?:boolean}) => {
-  // IMPORTANT!!! obj35, 30, 50... there are same models with different percent of polygons. Reduced in photoshop.
+  // IMPORTANT!!! obj35, 30, 50... these are the same models but with different percent of polygons. Reduced in photoshop.
   // 100% way to laggy, but 30 look like crap. Seems like 35 is best. Still to test and decide...
 
-  //sad. all is fine but camera at 35. have to try 40.
+  //sad. all is fine but camera looses shape at 35%. have to try 40.
 
     const materials = useLoader(MTLLoader, "/obj2056newtexture/Phone.mtl");
     const obj = useLoader(OBJLoader, "/obj2056newtexture/Phone.obj", (loader) => {
       materials.preload();
       loader.setMaterials(materials);
     });
+  //ok, 2056 polygons is a bare minimum
 
-    console.log(obj)
+    // console.log(obj)
 
-    const meshBox= new THREE.Box3().setFromObject(obj.children[0])
-    const meshCenter = meshBox.getCenter(new THREE.Vector3())
+    // const meshBox= new THREE.Box3().setFromObject(obj.children[0])
+    // const meshCenter = meshBox.getCenter(new THREE.Vector3())
     // obj.children[0].geometry.center()
 
     // obj.children[0].position.x = meshCenter.x
     obj.children[0].position.x = 5
-    obj.children[0].position.y = meshCenter.y
-    obj.children[0].position.z = meshCenter.z
+    // obj.children[0].position.y = meshCenter.y
+    // obj.children[0].position.z = meshCenter.z
 
     obj.children[0].rotation.x = 1.58
     obj.children[0].rotation.z = 0.025
     obj.children[0].rotation.y = 0.03
 //seems like ready
+//  let {scene} = useThree()
+//  scene.overrideMaterial = new MeshBasicMaterial({ color: "green" });
+//  console.log(obj)
 
+  
 
-    let starttime = 0;
-    let initialPosition = 5;
-    let targetPosition = 1;
-    let animationDuration = 3; //
+  
 
+//! 
+  // let starttime = 0;
+  // let initialPosition = 5;
+  // let targetPosition = 1;
+  // let animationDuration = 3; 
 
-  //  let {scene} = useThree()
-  //  scene.overrideMaterial = new MeshBasicMaterial({ color: "green" });
-  //  console.log(obj)
-
+  // function calculatePosition(time:any) {
+  //   // Рассчитываем прогресс анимации в диапазоне от 0 до 1
+  //   var progress = time / animationDuration;
+  //   // Применяем логарифмическую функцию для замедления
+  //   return initialPosition + (targetPosition - initialPosition) * Math.log(1 + progress * 9);
+  // }
+//INITIAL LOGIC TO BE OPTIMISED, SEE BELOW
+//this comment will not be deleted so i can still recognize what's goin on below, its the same function, can uncomment and check
+//FUNCTION BELOW IS THE SAME, BUT FASTER, it rly affects that crazy loop
+//!
 
 function calculatePosition(time:any) {
-  // Рассчитываем прогресс анимации в диапазоне от 0 до 1
-  var progress = time / animationDuration;
-  // Применяем логарифмическую функцию для замедления
-  return initialPosition + (targetPosition - initialPosition) * Math.log(1 + progress * 9);
-  
-}
+  return 5 + (-4 * Math.log(1 +(time*3)));
+} //ok, seems like i can't do anything else here, just simpler math calculations. it rly affected.
+
+let doesReached = false
+
+//!
+// const animate = (time:number)=>{
+//     obj.children[0].rotation.z += 0.03 
+//     if(obj.children[0].position.x >0){
+//         obj.children[0].position.x = calculatePosition(time/10) 
+//     }      
+// } INITIAL VERSION OF ANIMATION FUNCTION
+
+
+// const animate = (time:number)=>{
+//   obj.children[0].rotation.z += 0.03 
+//   if(!doesReached&&obj.children[0].position.x >0){
+//       obj.children[0].position.x = calculatePosition(time/10) 
+//   }
+//   else{doesReached=true}      
+// } ok, thats better, but still can be faster,
+// doesReached allows not to check second condition (its expensive) if first condition is not fulfilled
+//!
+
+
+
+// let xPosition = (position:any, time:number)=>{
+//   position.x>0?position.x=calculatePosition(time/10):null
+// } ok, its better not to create FNC, but do it directly into ternary
+
+let mesh = obj.children[0]
+// let meshRotZ = mesh.rotation.z //!this doesnt work, cuz its primitive, not an object(not a live link to property)
+let meshRot = mesh.rotation //but this does!
+let meshPos = mesh.position
+
+// const animate = (time:number)=>{
+//   meshRot.z += 0.03 
+//   {!doesReached?xPosition(meshPos, time):null}
+// } //unreadable, but rly faster. To understand check commented above, that's the same logic
+
 
 const animate = (time:number)=>{
-    obj.children[0].rotation.z += 0.03 
-    if(obj.children[0].position.x >0){
-        obj.children[0].position.x = calculatePosition(time/10) 
-    }
-    
-    
-}
+  meshRot.z += 0.03 
+  !doesReached?(meshPos.x>0? meshPos.x = calculatePosition(time/10):null):null
+} //seems like it's the best approach, unreadable, but rly faster. 
+  //check commented above to understand, that's the same logic
+
+  //TO COMPARE PERFORMANCE TO INITIAL VERSION 
+  //uncomment initial versions of 'animate' and 'calculatePosition' function
+  //and comment their current versions
 
   useFrame(({clock})=>{ 
     shouldUpdate?animate(clock.getElapsedTime()):null
@@ -93,7 +142,7 @@ const animate = (time:number)=>{
 export default function SecondPhone() {
   let ref = useRef(null)
   let focused = useRef(true)
-  let canvasRef = useRef(null)
+  // let canvasRef = useRef(null)
 
   useEffect(()=>{
         const cachedRef = ref.current
@@ -118,17 +167,19 @@ export default function SecondPhone() {
 
   return (
     <div ref={ref} style={{willChange:'transform'}} className="bg-bg400 h-[80vh] w-[61vw] z-[1]">
+
+      <Suspense>
       <Canvas 
       //  ref={canvasRef}
-      // dpr={0.8}
-      
+      // dpr={1}
+      className="absolute z-[9999]"
        >
 
       
        {/* {!shouldUpdate? <DisableRender></DisableRender>:null} */}
       {/* <axesHelper args={[15]} /> */}
-        <Suspense fallback={null}>
-            {/* <ambientLight intensity={2}></ambientLight> */}
+        {/* <Suspense fallback={null}> */}
+            <ambientLight intensity={2}></ambientLight>
 
           {/* <Bvh firstHitOnly> */}
             <Scene 
@@ -137,8 +188,9 @@ export default function SecondPhone() {
           {/* </Bvh> */}
 
           {/* <OrbitControls /> */}
-        </Suspense>
+        {/* </Suspense> */}
       </Canvas>
+      </Suspense>
     </div>
   );
 }
