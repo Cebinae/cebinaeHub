@@ -17,7 +17,7 @@ export default function TechLogo(props:{
             animationTimingFunction:'ease-in, linear',
             animationIterationCount:'1, infinite'
 
-        }} className="relative  animate-[logoWiggle_5s_linear_infinite]  w-[10vw] h-[100%] text-center flex flex-col items-center  ">
+        }} className="relative text-lightPrimary animate-[logoWiggle_5s_linear_infinite]  w-[10vw] h-[100%] text-center flex flex-col items-center  ">
 
             <div className="absolute bg-[black] opacity-[0.6] blur-md w-[100%] h-[100%] rounded-3xl bg-gradient-to-b from-bg700 "></div>
             <img src={props.logoPath} alt="react" width={150} height={150} style={{willChange:'transform'}} 

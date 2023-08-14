@@ -1,7 +1,7 @@
 'use client'
 import {gsap} from 'gsap'
 import { useEffect, useRef } from 'react';
-
+import Link from 'next/link';
 export default function Plane(props:{
     width:number
 }) {
@@ -25,9 +25,9 @@ useEffect(()=>{
 
 
     return(
-        <div style={{willChange:'transform'}} className='relative z-[1] h-min w-[min] bg-transparent top-[100px]' id='plane'>
+        <Link href='/contacts' style={{willChange:'transform'}} className='relative z-[1] h-min w-[min] bg-transparent top-[100px]' id='plane'>
             <img src="/plane/plane4.png" style={{willChange:'transform'}} height={300} width={props.width}></img>
             <img src='/plane/rotor2.svg' style={{willChange:'transform'}} className="absolute z-[999] transform-gpu animate-rotorSpin  top-[33%] right-[1px]"  height={300} width={props.width/6}></img>
-        </div>
+        </Link>
     )
 }

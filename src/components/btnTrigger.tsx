@@ -28,7 +28,7 @@ export default function Trigger() {
     
     return(
         <>
-        <div ref={triggerRef} className="bg-red absolute bottom-[60vh] w-[1vw] h-[1vh]"/>
+        <div ref={triggerRef} className=" absolute bottom-[60vh] w-[1px] h-[1px]"/>
         <ActionsBtn isCebinaeHub={visible} isFirstRender={isFirstRender.current}/>
         </>
     )

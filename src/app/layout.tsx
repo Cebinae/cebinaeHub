@@ -1,9 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import Header from '@/components/header'
 
-const inter = Inter({ subsets: ['latin'] })
+const font = Roboto({ subsets: ['latin'] , weight:'300'})
 
 export const metadata: Metadata = {
   title: 'CebinaeHub',
@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       {/* <style jsx global>{`
         html {
-          font-family: ${inter.style.fontFamily};
+          font-family: ${font.style.fontFamily};
         }
       `}</style> */}
       <body className= 'bg-bg400'>

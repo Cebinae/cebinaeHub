@@ -20,25 +20,25 @@ export default function Greeting(){
 
 
     return (
-        <main className=" relative h-[100vh] w-full flex flex-row justify-between" id='leftGreeting'>
+        <main className=" relative h-[100vh] w-full flex bg-bg700 flex-row justify-between" id='leftGreeting'>
 
-            <section className=" left-0 h-[100vh] w-[45vw] bg-bg700 will-change-transform">
+            <section className=" left-0 h-[100vh] w-[max] bg-bg700 will-change-transform">
                 <Image className= 'h-full w-auto' priority={true}  src={'/morda.jpg'} alt='myPrettyFace' width={0} height={0} sizes="100vh"></Image>
             </section>
 
 
 
 
-            <section className="  flex flex-col  h-[100vh] w-[55vw] bg-bg700 justify-center align-center will-change-transform overflow-shown">
+            <section className="  flex flex-col  h-[100vh] flex-1 bg-bg700 justify-center align-center will-change-transform overflow-shown">
 
-                <div  id="rightGreeting" className=" animate-greetingRight absolute z-[555] flex flex-col justify-center items-start  h-[300px] w-[300px] bg-bg700 rounded-[50%] left-[-30%]">
-                    <p className="text-[4rem] text-white ml-[40px]">Ilya</p>
-                    <p className="text-[4rem] text-white ml-[40px]">Belobrov</p>
+                <div  id="rightGreeting" className=" animate-greetingRight absolute top-[30vmin] max-h-[40vh] flex flex-col justify-center items-start  h-[300px] w-[300px] bg-bg700 rounded-[50%] left-[-150px]">
+                    <p className="text-[4rem] relative z-[999] text-lightPrimary ml-[40px]">Ilya</p>
+                    <p className="text-[4rem] relative z-[999] text-lightPrimary ml-[40px]">Belobrov</p>
                 </div>
 
-                <article style={{willChange:'transform'}} className="animate-greetingArticle absolute z-[1] flex flex-col h-[25vh] w-[40vw] bg-bg700 top-[63vh] justify-evenly">
-                    <h1 className="text-[1.4em] text-green">JavaScript developer</h1>
-                    <p  style={{willChange:'transform'}} className="text-[1.1em] text-lightSecondary">
+                <article style={{willChange:'transform'}} className="animate-greetingArticle mt-[60vh bottom-[3vh] px-[5vw] absolute z-[1] flex flex-col  w-[40vw] bg-bg700 justify-evenly">
+                    <h1 className="text-[1.4em] text-green relative z-[999] ]">JavaScript developer</h1>
+                    <p  style={{willChange:'transform'}} className="text-[1.1em] text-lightSecondary relative z-[4]">
                     Probably the one you're looking for ;)
 
                     Since childhood i`m keen on computer science and had no doubts about my craft.

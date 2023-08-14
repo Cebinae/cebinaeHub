@@ -1,6 +1,8 @@
 export default function ActionsBtn (props:{isCebinaeHub?:boolean, isFirstRender?:boolean}){
 
-    let wrapperClass = `${props.isCebinaeHub? 'bg-darkOrange z-[9999] ':'bg-darkOrange z-[999] '} fixed top-[85vh] right-[5vw]  rounded-xl overflow-hidden h-[50px] w-[200px] flex flex-row justify-evenly`
+    let wrapperClass = `${props.isCebinaeHub? 'bg-darkOrange z-[9999] ':'bg-darkOrange z-[999] '} 
+    fixed top-[85vh] right-[5vw] text-lightPrimary
+    rounded-xl overflow-hidden h-[50px] w-[200px] flex flex-row justify-evenly`
 
     return (
         <div className={wrapperClass}>

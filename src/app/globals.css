@@ -21,7 +21,7 @@ html{
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb)); */
   background: #2a2c2e;
   scroll-behavior: smooth;
   overflow-x: hidden;

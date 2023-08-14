@@ -1,6 +1,6 @@
 export default function PersonalArticle() {
     return(
-        <article className="flex flex-col h-[65vh] w-[50vw] justify-evenly self-center">
+        <article className="flex flex-col text-lightPrimary h-[65vh] w-[50vw] justify-evenly self-center">
         <p>
             My GitHub nickname - Cebinae - what is it? Cebinae is a huge subfamily of primates, the most
             famous of them are capuchin monkeys. I was inspired by their pro-active lifestyle
