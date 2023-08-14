@@ -29,7 +29,7 @@ export default function SkinhunterSecond (){
                     textSecondary="Each found offer will contain necessary data to consider a deal
                     and a quick link to this item"
                 />
-                <FeatureCard imgPrimary="/settings.png" imgSecondary="/notifee.png"
+                <FeatureCard imgPrimary="/notifee.png" imgSecondary="/notifee.png"
                      textPrimary="Adjust SkunHunter's setting accroding to your needs
                      and see how your balance changes"
                      textSecondary="Notifications will be grouped by title and display
