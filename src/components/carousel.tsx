@@ -88,7 +88,7 @@ export default function Carousel() {
             <div className='h-[80%] w-[80%] bg-red flex flex-row justify-start justify-self-center items-start'>
                 {photosArr.map((photo)=>{
 
-                return  <Image src={photo} alt='politeh' id='politehImg' className='relative left-[0px]] height-[400px] width-[auto] ml-[20px]'  width={500} style={{willChange:"transform"}}></Image>
+                return  <Image src={photo} alt='politeh' id='politehImg' className='relative left-[0px]] height-[100%] width-[auto]'  width={500} style={{willChange:"transform"}}></Image>
 
                 })}
             </div>
