@@ -166,7 +166,7 @@ export default function SecondPhone() {
 
 
   return (
-    <div ref={ref} style={{willChange:'transform'}} className="bg-bg400 h-[80vh] w-[61vw] z-[1]">
+    <div ref={ref} style={{willChange:'transform'}} className="bg-bg400 h-[80vh] w-[61vw] left-[7vw] z-[1]">
 
       <Suspense>
       <Canvas 

@@ -5,18 +5,19 @@ import SecondPhone from "../phoneObj/phoneObj";
 
 export default function SkinhunterFirst() {
 
-    let keywordSpan = "font-semibold text-lg"
+    let keywordSpan = "font-semibold 2xl:text-[2vh] xl:text-[2.5vh] lg:text-[2vh] xl:leading-[3vh] sm:text-[4vh]    leading-7    leading-7"
     return(
         <div className="w-[100vw] relative z-[1] h-[100vh] bg-bg400  flex flex-col justify-start align-start ">
 
         <main className="z-[999] absolute h-[100vh]">
             <div>
-                <h1 className=" relative text-9xl text-lightPrimary mt-[14vh] ml-[3vw]">SkinHunter</h1>
+                <h1 className=" relative text-[14.2vh] text-lightPrimary mt-[11vh] xl:mt-[5vh] ml-[3vw]">SkinHunter</h1>
             </div>
 
             <article>
                 {/* <p className="text-lg text-lightPrimary ml-[3vw] mt-[1vh]" >is a pet-project with a real commercial use</p> */}
-                <p className="text-lg text-lightSecondary w-[53vw] ml-[3vw] mt-[5vh] ml-[3vw]">
+                <p className="2xl:max-w-[100vw] xl:max-w-[45vw] 2xl:text-[2vh] xl:text-[2.5vh] lg:text-[2vh] xl:leading-[3vh]    sm:text-[4vh]   
+                 leading-7 text-lightSecondary w-[53vw] ml-[3vw] lg:mt-[0vh] mt-[2vh] ml-[3vw]">
                 is a pet-project with a real commercial use. The main purpose of this application is to provide an infinite monitoring of marketplace
                 according to configuration
                 and instantly notificate user when a profitable offer was found
@@ -24,9 +25,12 @@ export default function SkinhunterFirst() {
                 </p>
             </article>
 
-            <article className="absolute bottom-[15vh]">
+            <article className="absolute 2xl:bottom-[15vh] xl:bottom-[10vh]">
                 <p className="text-3xl font-semibold text-green ml-[3vw] mt-[5vh]">Technologies</p>
-                <p className="text-lg  text-lightSecondary w-[53vw] ml-[3vw] mt-[5vh]">
+                <p className="2xl:text-[2vh] xl:text-[2.5vh] lg:text-[2vh] xl:leading-7 sm:text-[4vh]    
+                2xl:leading-7 xl:leading-[3.3vh] 
+                lg:leading-[3.3vh]
+                text-lightSecondary w-[53vw] ml-[3vw] lg:mt-[3vh] mt-[5vh]">
                     SkinsHunter is a <span className={keywordSpan}>React Native</span> application written on <span className={keywordSpan}>TypeScript</span>. 
                     Since the beginning it was using <span className={keywordSpan}>ExpoCLI</span> and then 
                     was ejected in favor of <span className={keywordSpan}>NativeCLI</span> to achieve an advanced control above native side (<span className={keywordSpan}>gradle</span> build optimisation & android theme styling).
@@ -35,14 +39,14 @@ export default function SkinhunterFirst() {
                     There're two layers of security in this application - it both uses marketplace's secured <span className={keywordSpan}>REST-API</span> with hash-managed SSH authorisation
                     (Ed25519) and store keys into encrypted store of <span className={keywordSpan}>rn-keychain</span> aside from unsensitive 
                     data kept in <span className={keywordSpan}>async-storage</span> and synchronized by 
-                    <span className={keywordSpan}> redux-persist</span>. Surely, the list of used technoliges is much wider and can be seen at GitHub repository into package.json file.
+                    <span className={keywordSpan}> redux-persist</span>. Surely, the list of used technoliges is much wider and can be seen at GitHub repository in package.json file.
 
                 </p>
             </article>
             </main>
             <div className="absolute z-[1] bottom-[10vh] bg-green right-[0]">
                 {/* <AndroidObj></AndroidObj> */}
-                <SecondPhone></SecondPhone>
+                {/* <SecondPhone></SecondPhone> */}
                 {/* <PhoneScene></PhoneScene> */}
             </div>
         

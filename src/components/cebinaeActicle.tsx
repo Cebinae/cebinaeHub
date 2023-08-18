@@ -1,6 +1,10 @@
 export default function CebinaeArticle() {
     return(
-        <article className="flex flex-col text-lightPrimary h-[65vh] w-[50vw] justify-evenly self-center">
+        <article className="flex flex-col text-lightPrimary h-[65vh] w-[50vw] justify-evenly self-center
+        
+        
+        
+        ">
         <p>
             This website was made as a representation of my current skills and serve as a soft way
             to find out about me

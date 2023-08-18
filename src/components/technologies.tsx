@@ -16,7 +16,7 @@ export default function StarsBg() {
 
             {/* <div></div> */}
            <main className="absolute w-[60vw] h-full bg-transparent"> 
-                <h1 className="relative z-[1] 2xl:text-9xl xl:text-9xl lg:text-9xl text-lightPrimary md:text-8xl mt-[10vh] left-[3vw] ">Technologies</h1>
+                <h1 className="relative z-[1] 2xl:text-[14.2vh] xl:text-[14.2vh] lg:text-[14.2vh] md:text-8xl text-lightPrimary  mt-[10vh] left-[3vw] ">Technologies</h1>
                 <div className='relative'>
                     <p className="text-3xl text-lightSecondary ml-[5vw] mt-[5vh]">Key technologies</p>
                 </div>
@@ -27,7 +27,7 @@ export default function StarsBg() {
 
                 <article className="relative bg-transparent 2xl:w-[40vw] xl:w-[40vw] lg:w-[40vw] md:w-[80vw] ml-[5vw] mt-[3vh] h-[min] rounded-xl">
                     <p className="text-green 2xl:text-lg xl:text-lg lg:text-lg md:text-xl"> <span className="text-lightSecondary">Here're some technologies i also had experience with: </span> 
-                    TypeScript, Postman, REST-api, redux-persist, gradle, nativeCLI, expoCLI, native modules, background-actions, notifee, push-notifications, rn-keychain, async-storage, axios
+                    TypeScript, Postman, REST-api, redux-persist, gradle, nativeCLI, expoCLI, native modules, GSAP, three.js(react-three-fiber), background-actions, notifee, push-notifications, rn-keychain, async-storage, axios
                     <span className="text-lightSecondary">  and other minor technologies</span>
                     </p>
                 </article>

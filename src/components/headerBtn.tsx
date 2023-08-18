@@ -5,7 +5,7 @@ export default function NavBtn(props:{
 }) {
     return(
         <Link className="w-[200px] h-min" href={props.route}>
-            <p className="text-xl text-white hover:scale-[1.02] duration-150 will-change-transform">{props.title}</p>
+            <p className="text-xl text-white hover:scale-[1.04] text-center duration-150 will-change-transform">{props.title}</p>
         </Link>
     )
 }

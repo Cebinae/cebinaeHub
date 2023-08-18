@@ -38,7 +38,8 @@ export default function CvBtn (){
             origin-bottom-left
             2xl:h-[80vh] xl:h-[80vh] lg:h-[70vh] 
             2xl:w-[21vw] xl:w-[21vw] lg:w-[25vw]
-            md:h-[40vh] md:w-[]
+            md:h-[40vh] md:w-[25vw]
+
             top-[10vh] 
             2xl:right-[-23vw] xl:right-[-23vw] lg:right-[-27vw]
             2xl:group-hover/btn:right-[-21vw] xl:group-hover/btn:right-[-21vw] lg:group-hover/btn:right-[-27vw]
@@ -47,7 +48,7 @@ export default function CvBtn (){
             group-hover/btn:top-[20vh]     group-hover:rotate-[-20deg] group-hover/btn:block
 
             "> 
-                <p className="text-3xl absolute z-[2] text-lightPrimary">Resume</p>
+                <p className="text-3xl absolute z-[2] ml-[1vh] text-lightPrimary">Resume</p>
             </div>
     </a>
     )

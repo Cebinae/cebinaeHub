@@ -61,11 +61,11 @@ export default function Greeting(){
                         md:mb-[1vh] md:bg-bg700  md:rounded-xl md:mt-[1vh] md:hidden
                         x text-green relative z-[999]">JavaScript developer</h1>
                     <p  style={{willChange:'transform'}} className="
-                    text-[1.1em] text-lightSecondary relative z-[4]
+                    2xl:text-[2vh] xl:text-[2vh] lg:text-[2vh] text-lightSecondary relative z-[4]
                     2xl:max-w-[30vw]
                     xl:w-[60vh] xl:max-w-[100vw] 
                     lg:max-w-[80%] lg:h-[auto] lg:max-h-[20vh] lg:mb-[2vh] 
-                    md:w-[auto]  md:h-[auto]  
+                    md:w-[auto]  md:h-[auto]   xl:text-[2.5vh]
                     
                     sm:w-[60vw]
                     ">
@@ -73,7 +73,7 @@ export default function Greeting(){
                     {/* //  md:h-[min] md:max-h-[34vh]  md:w-min-[60vh] md:py-[1vh] md:px-[1vh] */}
                     Since childhood i`m keen on computer science and had no doubts about my craft.
                     Being mostly interested in hight-quality web instactructure i found my passion in creating performant client-side applications.
-                    My aim is to become a teammate that greatly contributes to a company's business value.
+                    My aim is to become a teammate who greatly contributes to a company's business value.
                     Creating something worthy is often a competition. And i'm ready to competee.
                     </p>
 

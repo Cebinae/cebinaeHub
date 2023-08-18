@@ -20,8 +20,9 @@ export default function FeatureCard(props:{
     
         // transitionDuration:'0.8s',
         transformStyle:'preserve-3d'
-        }} className="w-[20vw]  group-hover:animate-cardPrimary animate-cardSecondary
-        text-lightPrimary relative h-[65vmin] rounded-xl ">
+        }} className=" group-hover:animate-cardPrimary animate-cardSecondary
+        text-lightPrimary relative  rounded-xl 
+        h-[65vmin] aspect-[8.5/16]  ">
 
 
             <Image style={{
@@ -56,11 +57,13 @@ export default function FeatureCard(props:{
 
 
 
-            <article style={{backfaceVisibility:'hidden'}} className=' absolute border-2 opacity-[0.7] z-[999] p-[3%] rounded-xl bg-bg700 bottom-[-2%] self-center align-center left-[0] right-[0] ml-[auto] mr-[auto] w-[80%] h-[min] '>
+            <article style={{backfaceVisibility:'hidden'}} className=' absolute border-2 opacity-[0.7] z-[999] p-[3%] rounded-xl bg-bg700 bottom-[-2%] self-center 
+            align-center left-[0] right-[0] ml-[auto] mr-[auto] w-[85%] h-[min] '>
                 <p>{props.textPrimary}</p>
             </article>
             <article style={{backfaceVisibility:'hidden', transform:"rotateY(180deg)"}} 
-                className=' absolute opacity-[0.7] z-[998] border-2 p-[3%] rounded-xl bg-bg700 bottom-[-2%] self-center align-center left-[0] right-[0] ml-[auto] mr-[auto] w-[80%] h-[min] '>
+                className=' absolute opacity-[0.7] z-[998] border-2 p-[3%] rounded-xl bg-bg700 bottom-[-2%] self-center align-center
+                 left-[0] right-[0] ml-[auto] mr-[auto] w-[85%] h-[min] '>
                 <p>{props.textSecondary}</p>
             </article>
         </div>
