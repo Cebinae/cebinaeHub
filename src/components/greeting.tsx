@@ -29,7 +29,7 @@ export default function Greeting(){
                 md:opacity-[0.7]
 
             ">
-                <img className= 'h-full w-auto'  src={'/morda.webp'} alt='myPrettyFace' sizes="100vh"></img>
+                <img className= 'h-[100vh] w-auto' width={1080} src={'/morda.webp'} alt='myPrettyFace' sizes="100vh"></img>
             </section>
 
 
