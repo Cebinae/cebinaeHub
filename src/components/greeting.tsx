@@ -1,8 +1,5 @@
 import Image from "next/image"
-import gsap from 'gsap'
 import * as React from 'react'
-import ArrowDown from "./buttonDown"
-
 
 
 export default function Greeting(){
@@ -29,7 +26,7 @@ export default function Greeting(){
                 md:opacity-[0.7]
 
             ">
-                <img className= 'h-[100vh] w-auto' width={1080} src={'/morda.webp'} alt='myPrettyFace' sizes="100vh"></img>
+                <Image className= 'h-[100vh] w-auto' priority={true}  src={require('../../public/morda.webp')} alt='myPrettyFace' ></Image>
             </section>
 
 
