@@ -46,7 +46,7 @@ export default function SkinhunterFirst() {
             </main>
             <div className="absolute z-[1] bottom-[10vh] bg-green right-[0]">
                 {/* <AndroidObj></AndroidObj> */}
-                {/* <SecondPhone></SecondPhone> */}
+                <SecondPhone></SecondPhone>
                 {/* <PhoneScene></PhoneScene> */}
             </div>
         

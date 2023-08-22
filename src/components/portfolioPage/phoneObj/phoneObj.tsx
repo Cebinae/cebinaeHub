@@ -9,9 +9,6 @@ import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
 import { DDSLoader } from "three-stdlib";
 import { Suspense } from "react";
 import {useRef, useState, useEffect } from 'react'
-import {Stage, AdaptiveDpr, Bvh} from '@react-three/drei'
-import { MeshBasicMaterial } from "three";
-import { resolve } from "path";
 
 
 THREE.DefaultLoadingManager.addHandler(/\.dds$/i, new DDSLoader());
@@ -19,7 +16,7 @@ THREE.DefaultLoadingManager.addHandler(/\.dds$/i, new DDSLoader());
 var shouldUpdate = true    // necessary to link 2 components, props dont work here, redux would be slow in a loop
 
 
-const Scene = (props:{isVisible?:boolean}) => {
+const Scene = () => {
   // IMPORTANT!!! obj35, 30, 50... these are the same models but with different percent of polygons. Reduced in photoshop.
   // 100% way to laggy, but 30 look like crap. Seems like 35 is best. Still to test and decide...
 
@@ -72,9 +69,9 @@ const Scene = (props:{isVisible?:boolean}) => {
 //FUNCTION BELOW IS THE SAME, BUT FASTER, it rly affects that crazy loop
 //!
 
-function calculatePosition(time:any) {
-  return 5 + (-4 * Math.log(1 +(time*3)));
-} //ok, seems like i can't do anything else here, just simpler math calculations. it rly affected.
+// const calculatePosition =(time:any) =>{
+//   return 5 + (-4 * Math.log(1 +(time*3)));
+// } //The best approach if use 'clean' function, but not the best for runtime optimizer
 
 let doesReached = false
 
@@ -103,10 +100,15 @@ let doesReached = false
 //   position.x>0?position.x=calculatePosition(time/10):null
 // } ok, its better not to create FNC, but do it directly into ternary
 
-let mesh = obj.children[0]
+const mesh = obj.children[0]
 // let meshRotZ = mesh.rotation.z //!this doesnt work, cuz its primitive, not an object(not a live link to property)
-let meshRot = mesh.rotation //but this does!
-let meshPos = mesh.position
+const meshRot = mesh.rotation //but this does!
+const meshPos = mesh.position
+
+
+// const calculatePosition =(time:any) =>{
+//   meshPos.x =  5 + (-4 * Math.log(1 +(time*3)));
+// } not sure if better than clean version, see no difference
 
 // const animate = (time:number)=>{
 //   meshRot.z += 0.03 
@@ -114,10 +116,20 @@ let meshPos = mesh.position
 // } //unreadable, but rly faster. To understand check commented above, that's the same logic
 
 
+// const animate = (time:number)=>{
+//   meshRot.z += 0.03 
+//   !doesReached?(meshPos.x>0? meshPos.x = calculatePosition(time/10):null):null
+// } 
+
 const animate = (time:number)=>{
-  meshRot.z += 0.03 
-  !doesReached?(meshPos.x>0? meshPos.x = calculatePosition(time/10):null):null
-} //seems like it's the best approach, unreadable, but rly faster. 
+  meshRot.z += 0.03
+  !doesReached&&meshPos.x>0?     meshPos.x= 5 + (-4 * Math.log(1 +(time/4))):null
+    
+}
+
+
+
+//seems like it's the best approach, unreadable, but rly faster. 
   //check commented above to understand, that's the same logic
 
   //TO COMPARE PERFORMANCE TO INITIAL VERSION 
@@ -127,10 +139,10 @@ const animate = (time:number)=>{
   useFrame(({clock})=>{ 
     shouldUpdate?animate(clock.getElapsedTime()):null
   })
-
-
+  const scale = 2.2
+  const position = [0,0,0]
   return (
-      <primitive  object={obj} scale={2.2} position={[0, 0, 0]} />
+      <primitive  object={obj} scale={scale} position={position} />
   )
 };
 
@@ -183,7 +195,7 @@ export default function SecondPhone() {
 
           {/* <Bvh firstHitOnly> */}
             <Scene 
-            isVisible={focused.current}
+            // isVisible={focused.current}
             />
           {/* </Bvh> */}
 

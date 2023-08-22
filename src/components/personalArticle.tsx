@@ -42,8 +42,10 @@ export default function PersonalArticle() {
         </p> */}
 
         {/* <p>
-           Most of my hobbies 
+            I'm not a newbie in a teamwork - since 16 i had
         </p> */}
+
+
         
         {/* <p>
             I was always able to gain a significant skills in each of my hobbies much faster than it's supposed. That's the power of doing things you realy like
