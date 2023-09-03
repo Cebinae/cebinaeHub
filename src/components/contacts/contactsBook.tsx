@@ -84,7 +84,7 @@ let runEmission = (delay:number)=>{
                 opacity:0,
             },{
                 delay:1.5,
-                duration:0.4,
+                duration:0.6,
                 opacity:0.3,
                 repeat:0
             })
@@ -104,16 +104,17 @@ let runEmission = (delay:number)=>{
     return(
         <div style={{perspective:'130%'}} className="bg-bg700 top-[-10vh]  h-[100vh] w-[100vw] flex flex-col justify-center items-center">
             {/* <main className='mt-[30vh] relative h-[500px] bg-green w-[500px]'> */}
-                <img className ='absolute z-[2] object-fill p-[0] h-[70vh] w-[auto]' src="/book2.svg" ></img>
+                <img className ='absolute z-[2] object-fill p-[0] h-[70vh] w-[auto]' src="/book/book2.svg" ></img>
 
                 <div id='bookwrapper' className="relative z-[999]">
-                    <Image priority={true} alt="" height={500} width={500} className ='relative z-[998] top-[-3%] object-cover h-[67vh] w-[auto] opacity-[1]' src="/bookwrapper2.svg" ></Image>
+                    <Image priority={true} alt="" height={500} width={500} className ='relative z-[998] top-[-3%] object-cover h-[67vh] w-[auto] opacity-[1]' src="/book/bookwrapper2.svg" ></Image>
                     <p id='bookLabel' className = 'absolute top-[10%] left-[0] right-[0] z-[999] text-center text-lightPrimary text-6xl'>Cebinae</p>
                     
                 </div>
 
                 <article id='page' className="absolute opacity-[0] left-[0] right-[0] ml-[auto] mr-[auto] inline-block   
-                flex flex-col content-start items-start  bg-transparent h-[70vh] w-[45vh] z-[99] 
+                flex flex-col content-start items-start  bg-transparent h-[70vh] w-[45vh] 
+                z-[9999] 
                 skew-x-[-2deg] ">
                     {/* <h1 className= 'relative self-center text-[2vw] m-0 text-bg700 '>Contacts</h1> */}
                     <ul  className="z-[92]  text-lightSecondary font-semibold mb-[20vh] h-[100%] w-[100%]">
@@ -121,7 +122,7 @@ let runEmission = (delay:number)=>{
 
                         <h1 className= '  mt-[7vh] mr-[1vw] mb-[2vw] text-center left-[-3vw] text-[5.5vh] text-bg200 opacity-[0.7] '>{'Contacts'}</h1>
 
-                        <Contact label="LinkedIn" linkText="linkedin.com/in/ilya-belobrov" link="http://linkedin.com/in/ilya-belobrov"></Contact>
+                        <Contact label="LinkedIn" linkText="linkedin.com/in/ilyabelobrov" link="http://linkedin.com/in/ilyabelobrov"></Contact>
                         <Contact label="Github" linkText="github.com/Cebinae" link="http://github.com/Cebinae" ></Contact>
                         <Contact label="Email" linkText="ilyabelobrovhaha@gmail.com" link="mailto:ilyabelobrovhaha@gmail.com"></Contact>
                         <Contact label="Cell & Telegram" linkText="098 046 72 63" link="tel:0980467263"></Contact>
@@ -133,11 +134,11 @@ let runEmission = (delay:number)=>{
 
 
 
-                <div className="fixed right-[-5vw] mt-[20vh]  z-[9] h-[80vh] w-[40vw]">
+                <div className="fixed right-[-5vw] mt-[20vh]  z-[999] h-[80vh] w-[40vw]">
 
                     <div className=" bottom-[0] fixed h-[90%] w-[100%]">
-                        <Image priority={true} className="relative right-[-5vw] mt-[10vh] bottom-[5vh] z-[99998] rotate-[0deg] h-[90vh] w-[auto]" src='/lamp/lamp3.png' alt='lamp' width={400} height={700}></Image>
-                        <Image id='emission' className=" absolute opacity-[0] h-[80%] left-[-40%] top-[13%] w-[60%] z-[9999] top-[0]" src='/lamp/emission.png' width={400} height={400} alt='light'></Image>  
+                        <Image priority={true} className="relative right-[-5vw] mt-[10vh] bottom-[5vh] z-[9999999] rotate-[0deg] h-[90vh] w-[auto]" src='/lamp/lamp3.png' alt='lamp' width={400} height={700}></Image>
+                        <Image id='emission' className=" absolute opacity-[0] h-[80%] left-[-40%] top-[13%] w-[60%] z-[1] top-[0]" src='/lamp/emission.png' width={400} height={400} alt='light'></Image>  
                     </div>
                 </div>
         </div>

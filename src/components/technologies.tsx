@@ -26,13 +26,13 @@ export default function StarsBg() {
                 </div>
 
                 <article className="relative bg-transparent 2xl:w-[40vw] xl:w-[40vw] lg:w-[40vw] md:w-[80vw] ml-[5vw] mt-[3vh] h-[min] rounded-xl">
-                    <p className="text-green 2xl:text-lg xl:text-lg lg:text-lg md:text-xl"> <span className="text-lightSecondary">Here're some technologies i also had experience with: </span> 
-                    TypeScript, Postman, REST-api, redux-persist, gradle, nativeCLI, expoCLI, native modules, GSAP, three.js(react-three-fiber), background-actions, notifee, push-notifications, rn-keychain, async-storage, axios
+                    <p className="text-green 2xl:text-lg xl:text-lg lg:text-lg md:text-xl"> <span className="text-lightSecondary">Here're some technologies I also had experience with: </span> 
+                    TypeScript, reduxtoolkit, redux-persist, REST-api, postman, gradle, nativeCLI, expoCLI, native modules, GSAP, three.js(react-three-fiber), background-actions, notifee, push-notifications, rn-keychain, async-storage, axios
                     <span className="text-lightSecondary">  and other minor technologies</span>
                     </p>
                 </article>
                 <article className="2xl:w-[40vw] xl:w-[40vw] lg:w-[40vw] md:w-[80vw] ml-[5vw] mt-[3vh] h-[min]">
-                    <p className="text-lightSecondary 2xl:text-lg xl:text-lg lg:text-lg md:text-xl">There's some other technologies im especially interested in and look forward to try my hand: Java(andorid), Flutter, and node.js based back-end</p>
+                    <p className="text-lightSecondary 2xl:text-lg xl:text-lg lg:text-lg md:text-xl">There's some other technologies I'm especially interested in and look forward to try my hand: Java(andorid), Flutter, and node.js based back-end</p>
                 </article>
                 
             </main>

@@ -1,4 +1,4 @@
-import CloudsBg from "./cloudsBg"
+import CloudsBg from "./unusedComponents/cloudsBg"
 import WebsiteCard from "./websiteCard"
 import PersonalArticle from "./personalArticle"
 

@@ -1,14 +1,13 @@
 'use client'
 
 import * as THREE from "three";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { useLoader } from "@react-three/fiber";
-import { Environment, OrbitControls } from "@react-three/drei";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
 import { DDSLoader } from "three-stdlib";
 import { Suspense } from "react";
-import {useRef, useState, useEffect } from 'react'
+import {useRef, useEffect } from 'react'
 
 
 THREE.DefaultLoadingManager.addHandler(/\.dds$/i, new DDSLoader());
@@ -20,10 +19,10 @@ const Scene = () => {
   // IMPORTANT!!! obj35, 30, 50... these are the same models but with different percent of polygons. Reduced in photoshop.
   // 100% way to laggy, but 30 look like crap. Seems like 35 is best. Still to test and decide...
 
-  //sad. all is fine but camera looses shape at 35%. have to try 40.
+  //sad. all is fine but camera looses shape at 35%. i have to try 40.
 
-    const materials = useLoader(MTLLoader, "/obj2056newtexture/Phone.mtl");
-    const obj = useLoader(OBJLoader, "/obj2056newtexture/Phone.obj", (loader) => {
+    const materials = useLoader(MTLLoader, "/objGreen2056/Phone.mtl");
+    const obj = useLoader(OBJLoader, "/objGreen2056/Phone.obj", (loader) => {
       materials.preload();
       loader.setMaterials(materials);
     });
@@ -121,9 +120,15 @@ const meshPos = mesh.position
 //   !doesReached?(meshPos.x>0? meshPos.x = calculatePosition(time/10):null):null
 // } 
 
+// const animate = (time:number)=>{
+//   meshRot.z += 0.015
+//   !doesReached&&meshPos.x>0.7?  meshPos.x= 5 + (-4 * Math.log(1 +(time/8))):null
+    
+// } new values below are choosen to minimize time of being out of viewport, logic is the same
+
 const animate = (time:number)=>{
-  meshRot.z += 0.03
-  !doesReached&&meshPos.x>0?     meshPos.x= 5 + (-4 * Math.log(1 +(time/4))):null
+  meshRot.z += 0.015
+  !doesReached&&meshPos.x>0.7?  meshPos.x= 3.65 + (-2.65 * Math.log(1 +(time/8))):null
     
 }
 
@@ -139,7 +144,7 @@ const animate = (time:number)=>{
   useFrame(({clock})=>{ 
     shouldUpdate?animate(clock.getElapsedTime()):null
   })
-  const scale = 2.2
+  const scale = 2.3
   const position = [0,0,0]
   return (
       <primitive  object={obj} scale={scale} position={position} />
@@ -153,7 +158,6 @@ const animate = (time:number)=>{
 
 export default function SecondPhone() {
   let ref = useRef(null)
-  let focused = useRef(true)
   // let canvasRef = useRef(null)
 
   useEffect(()=>{
@@ -178,12 +182,12 @@ export default function SecondPhone() {
 
 
   return (
-    <div ref={ref} style={{willChange:'transform'}} className="bg-bg400 h-[80vh] w-[61vw] left-[7vw] z-[1]">
+    <div ref={ref} style={{willChange:'transform'}} className="bg-bg400 h-[80vh] w-[61vw] z-[1]">
 
       <Suspense>
       <Canvas 
       //  ref={canvasRef}
-      // dpr={1}
+      // dpr={1} here i can configure model texture quality. Better to let it blury a bit
       className="absolute z-[9999]"
        >
 

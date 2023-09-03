@@ -1,1 +1,0 @@
-reduced polygons twice, but still heavy like crap

@@ -1,5 +1,5 @@
 import Contacts from "@/components/websiteCard";
-import CloudsBg from './../../components/cloudsBg';
+import CloudsBg from '../../components/unusedComponents/cloudsBg';
 
 import ContactsBook from "@/components/contacts/contactsBook";
 

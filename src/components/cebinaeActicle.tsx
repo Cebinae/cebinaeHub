@@ -10,7 +10,7 @@ export default function CebinaeArticle() {
             to find out about me
         </p>
         <h1 >
-           Key techologies
+           Key techologies :
         </h1>
         <p>
             Next.js, Tailwind, Three.js(react-three-fiber), Gsap, TypeScript
@@ -22,23 +22,22 @@ export default function CebinaeArticle() {
         </p>
         <h1>TODO:</h1>
         <li>
-            Adaptivness for a smaller screens is upcoming
+            Adaptivness is done for medium screens and support of mobile devices is upcoming
         </li>
         <li>
-            Rewrite plane animation without gsap to reduce CPU load by delegating calculations to the GPU thread
-            as CSS-based animations allows
+            Get rid of javascript-based animations everywhere it's possible to reduce CPU load by delegating calculations to GPU thread
         </li>
         <li>
             Change default three.js render loop to my own custom in order to a acieve deeper control above 
             3d model
         </li>
         <li>
-            Surery, there a way to make 3d model lighter itself - in addition to polygons decreasing and 3x times texures weight
+            Surely, there's a way to make 3d model even lighter itself - in addition to polygons decreasing and 3x times texures weight
             reducing, 'scene' and 'model' optimisations can be done.  
         </li>
        
         <p>
-            All of these will be done sooon according to the task priority ;)
+            All of these will be done soon according to the task priority
        </p>
     </article>
     )

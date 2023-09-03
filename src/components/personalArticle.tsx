@@ -7,12 +7,12 @@ export default function PersonalArticle() {
             md:w-[65vw]
         ">
         <p>
-            My GitHub nickname - Cebinae - what is it? Cebinae is a huge subfamily of primates, the most
+            My GitHub nickname - Cebinae - what is it? Cebinae is a subfamily of primates, the most
             famous of them are capuchin monkeys. I was inspired by their pro-active lifestyle
             and believe they're gorgeous
         </p>
         <p>
-            My closest non-career related aim is to resume my casual sports routine as i always did it before
+            My closest non-career related aim is to resume my casual sports routine as I always did it before
         </p>
         <p>
             The first executable file I've ever wrote was a non-harmful joke virus that was able to
@@ -29,11 +29,11 @@ export default function PersonalArticle() {
             {/* I always was able to achieve greater results than supposed in fields i like. */}
             A sincere passion for guitar made me to
             gain a significant skills for less than a year and this efficiency bonus is relevant for any field I like.
-            That's why i see no other outcome except of becoming a fast-growing employee
+            That's why I see no other outcome except of becoming a fast-growing employee
         </p>
      
         <p>
-            During my childhood i've changed several schools and all of them had advanced study of English as a specialization.
+            During my childhood I've changed several schools and all of them had advanced study of English as a specialization.
             However, the biggest impact was made by consuming a foreign entertainment content
         </p>
         {/* <p>

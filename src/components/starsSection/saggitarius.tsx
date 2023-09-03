@@ -4,7 +4,7 @@ import Dot from "../starDot"
 export default function Saggitarius() {
     return(
         <div className="absolute right-[10px] h-[400px] w-[400px] bottom-[10vh] 2xl:opacity-[1] xl:opacity-[1] lg:opacity-[1] md:opacity-[0.2] right-[10vw]">
-        <Image src={'/sagg5.png'} alt="saggitarius" width={400} height={400} className="opacity-[0.3] absolute"></Image>
+        <Image src={'/saggitarius.png'} alt="saggitarius" width={400} height={400} className="opacity-[0.3] absolute"></Image>
         <Dot id="1" small={true} top={'4.8%'} left={'56.5%'}></Dot>
         <Dot id="2" small={true} top={'24%'} left={'57.5%'}></Dot>
         <Dot id="3" small={true} top={'23%'} left={'84.5%'}></Dot>

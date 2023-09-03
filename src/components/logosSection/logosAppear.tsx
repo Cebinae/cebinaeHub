@@ -59,10 +59,10 @@ export default function LogosSection(){
     return(
        
             <div ref ={element} className="absolute mt-[7vh] w-[100%] md:w-[80vw] h-[min] flex flex-row ml-[5vw]" id="logos" onLoad={()=>console.log('focused')}>
-                {react?<TechLogo delay="2" title="React" logoPath="React-icon.svg"></TechLogo>:null}
-                {reactnative?<TechLogo delay="2" title="React Native" logoPath="React-icon.svg"></TechLogo>:null}
-                {nextjs?<TechLogo delay="2"  title="Next.js" logoPath="next.svg"></TechLogo>:null}
-                {tailwind?<TechLogo  delay="2" title="Tailwind" logoPath="tailwind.svg"></TechLogo>:null}
+                {react?<TechLogo delay="2" title="React" logoPath="/logos/React-icon.svg"></TechLogo>:null}
+                {reactnative?<TechLogo delay="2" title="React Native" logoPath="/logos/React-icon.svg"></TechLogo>:null}
+                {nextjs?<TechLogo delay="2"  title="Next.js" logoPath="/logos/next.svg"></TechLogo>:null}
+                {tailwind?<TechLogo  delay="2" title="Tailwind" logoPath="/logos/tailwind.svg"></TechLogo>:null}
                 {/* {redux?<TechLogo  delay="0.5" title="Redux toolkit" logoPath="redux.svg"></TechLogo>:null} */}
 
             </div>

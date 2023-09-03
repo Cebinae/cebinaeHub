@@ -1,5 +1,5 @@
 // import ArrowDown from '@/components/buttonDown'
-// import Education from '@/components/eduSection'
+// import Education from '@/components/education/eduSection'
 import Greeting from '@/components/greeting'
 // import StarsBg from '@/components/technologies'
 // import Image from 'next/image'
@@ -11,7 +11,7 @@ import { Suspense } from 'react'
 // import dynamic from 'next/dynamic'
 
 const StarsBg = React.lazy(() => import('@/components/technologies'));
-const Education = React.lazy(() => import('@/components/eduSection'));
+const Education = React.lazy(() => import('@/components/education/eduSection'));
 const PersonalFacts = React.lazy(() => import('@/components/personal'));
 
 // const StarsBg = dynamic(() => import('@/components/technologies'))

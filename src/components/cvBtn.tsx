@@ -2,8 +2,8 @@
 
 export default function CvBtn (){
     return(
-    <a href={'/CV4.pdf'} download={'Cebinae_Ilya_Bielorov_CV'} className="
-        relative z-[9991]
+    <a href={'/downloadable/Ilya_Belobrov_javascript_CV.pdf'} download={'Ilya_Belobrov_javascript_CV'} className="
+        relative z-[8]
         group/btn
         flex flex-row justify-center items-center
         bg-transparent
@@ -33,16 +33,17 @@ export default function CvBtn (){
             rotate-[0deg]
             pointer-events-none
             shadow-[0_35px_0px_25px_rgba(23,25,26,1)]
-            fixed z-[-9999999999]  bg-darkGreen 
-         transition-all duration-500
+            fixed z-[1]  bg-darkGreen 
+            transition-all duration-500
             origin-bottom-left
             2xl:h-[80vh] xl:h-[80vh] lg:h-[70vh] 
             2xl:w-[21vw] xl:w-[21vw] lg:w-[25vw]
             md:h-[40vh] md:w-[25vw]
 
             top-[10vh] 
-            2xl:right-[-23vw] xl:right-[-23vw] lg:right-[-27vw]
-            2xl:group-hover/btn:right-[-21vw] xl:group-hover/btn:right-[-21vw] lg:group-hover/btn:right-[-27vw]
+            2xl:right-[-23vw] xl:right-[-23vw] lg:right-[-27vw] md:right-[-27vw]
+            2xl:group-hover/btn:right-[-21vw] xl:group-hover/btn:right-[-21vw] lg:group-hover/btn:right-[-27vw] 
+            md:group-hover/btn:right-[-27vw]
 
             group-hover/btn:rotate-[-20deg]
             group-hover/btn:top-[20vh]     group-hover:rotate-[-20deg] group-hover/btn:block
