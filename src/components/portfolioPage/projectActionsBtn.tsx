@@ -6,14 +6,18 @@ export default function ActionsBtn (props:{isCebinaeHub?:boolean, isFirstRender?
 
     return (
         <div className={wrapperClass}>
+
             <button style={{animationFillMode:'forwards', willChange:'transform'}} 
                 className={`  rounded-l-xl  w-[50%]'
                 ${props.isFirstRender? 'w-[50%]':'w-[0%]'}         
                 ${props.isCebinaeHub? 'animate-btnCollapse ' :'bg-darkOrange '} hover:bg-[#d67a40]
                 ${!props.isFirstRender&&!props.isCebinaeHub? 'animate-btnReveal':''}         
                 `}>
-                    {/* {console.log('isfirt', props.isFirstRender)} */}
-                    <p>Download</p>
+                    <a href={'/downloadable/skinhunter.apk'} download={'skinhunter.apk'}>
+                        <div className="flex-1 flex flex-col justify-center h-[100%] text-middle">
+                            <p>Downloadd</p> 
+                        </div>
+                    </a>
             </button>
             
             <button style={{willChange:'transform'}} className="flex-1 rounded-r-xl bg-darkOrange hover:bg-[#c26e3a] ">
