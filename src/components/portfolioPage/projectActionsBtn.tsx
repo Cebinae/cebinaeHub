@@ -15,7 +15,7 @@ export default function ActionsBtn (props:{isCebinaeHub?:boolean, isFirstRender?
                 `}>
                     <a href={'/downloadable/skinhunter.apk'} download={'skinhunter.apk'}>
                         <div className="flex-1 flex flex-col justify-center h-[100%] text-middle">
-                            <p>Downloadd</p> 
+                            <p>Download</p> 
                         </div>
                     </a>
             </button>
