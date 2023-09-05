@@ -14,7 +14,7 @@ THREE.DefaultLoadingManager.addHandler(/\.dds$/i, new DDSLoader());
 
 var shouldUpdate = true    
 
-//! ALL THE COMMENTS ARE IN THE DEV/ BRANCH, all is explained there, dnt try to understand without it ;)
+//! ALL THE COMMENTS ARE IN THE DEV/ BRANCH, all is explained there, dnt try to understand without it
 
 const Scene = () => {
     const materials = useLoader(MTLLoader, "/objGreen2056/Phone.mtl");
@@ -22,10 +22,8 @@ const Scene = () => {
       materials.preload();
       loader.setMaterials(materials);
     });
-    const scale = 2.3
-    const position = [0,0,0]
- 
-    let doesReached = false
+    
+    // let doesReached = false
 
     const mesh = obj.children[0]
     const meshRot = mesh.rotation 
@@ -36,9 +34,17 @@ const Scene = () => {
     meshRot.y = 0.025
     meshRot.z = 0.03
 
+    const scale = 2.3
+    const position = [0,0,0]
+ 
+    const preRot = 0.015
+    const rot = 0.009
+    const initialMovement  = (time:number)=>{
+      meshPos.x= 3.65 + (-2.65 * Math.log(1 +(time/8)))
+      meshRot.z += preRot
+    }
     const animate = (time:number)=>{
-    meshRot.z += 0.015
-    !doesReached&&meshPos.x>0.7?  meshPos.x= 3.65 + (-2.65 * Math.log(1 +(time/8))):null
+    meshPos.x>0.7?  initialMovement(time): meshRot.z += rot
     }
 
   useFrame(({clock})=>{ 
