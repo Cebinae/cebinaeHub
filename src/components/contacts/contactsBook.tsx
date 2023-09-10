@@ -124,7 +124,7 @@ let runEmission = (delay:number)=>{
 
                         <Contact label="LinkedIn" linkText="linkedin.com/in/ilyabelobrov" link="http://linkedin.com/in/ilyabelobrov"></Contact>
                         <Contact label="Github" linkText="github.com/Cebinae" link="http://github.com/Cebinae" ></Contact>
-                        <Contact label="Email" linkText="ilyabelobrovhaha@gmail.com" link="mailto:ilyabelobrovhaha@gmail.com"></Contact>
+                        <Contact label="Email" linkText="belobrovdev@protonmail.com" link="mailto:belobrovdev@protonmail.com"></Contact>
                         <Contact label="Cell & Telegram" linkText="098 046 72 63" link="tel:0980467263"></Contact>
                         <Contact label="Telegram" linkText="t.me/cebinae" link="http://t.me/Cebinae"></Contact>
                     </ul>               

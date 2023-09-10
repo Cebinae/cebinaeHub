@@ -43,14 +43,14 @@ export default function Greeting(){
                     md:ml-[5vh] md:mb-[4vh] md:left-[-65vh] md:py-[0vh] md:z-[9999] md:rounded-2xl md:bg-bg700 md:min-w-[500px]  md:bg-bg700
                     absolute z-[999] flex flex-col w-[40vw] bg-bg700 justify-end overflow-shown">
                     <h1 className="text-[1.4em] 
-                        2xl:inline-block
+                        2xl:inline-block 2xl:mb-[1vh]
                         xl:mb-[0] xl:inline-block
                         lg:mb-[1vh] lg:px-[0] lg:inline-block
                         md:mb-[1vh] md:bg-bg700  md:rounded-xl md:mt-[1vh] md:hidden
                         x text-green relative z-[999]">JavaScript developer</h1>
                     <p  style={{willChange:'transform'}} className="
                     2xl:text-[2vh] xl:text-[2.4vh] lg:text-[2vh] md:text-[2vh] sm:text-[5vh]  text-lightSecondary relative z-[4]
-                    2xl:max-w-[30vw]
+                    2xl:max-w-[30.4vw]
                     xl:w-[60vh] xl:max-w-[100vw] 
                     lg:max-w-[80%] lg:h-[auto] lg:max-h-[20vh] lg:mb-[3.5vh] 
                     md:mb-[1vh] 
@@ -62,8 +62,8 @@ export default function Greeting(){
                     {/* //  md:h-[min] md:max-h-[34vh]  md:w-min-[60vh] md:py-[1vh] md:px-[1vh] */}
                     {' '}Since childhood I`m keen on computer science and had no doubts about my craft.
                     Being mostly interested in hight-quality web instactructure I found my passion creating performant client-side applications.
-                    My aim is to be a teammate who greatly contributes to company's business value.
-                    Creating something worthy is often a competition. And I'm ready to competee.
+                    My aim is to be a teammate who greatly contributes to a company's business value.
+                    Creating something worthy is often a competition. And I'm ready to compete.
                     </p>
 
                 </article>

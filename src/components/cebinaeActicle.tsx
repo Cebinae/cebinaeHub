@@ -18,7 +18,7 @@ export default function CebinaeArticle() {
         <p>
             To achieve the least load time and a better usage perfomance this website use 
             as less third-party libraries as possible. 
-            A lot of optimisation work was done and still theres's a lot to do:
+            A lot of optimization work was done and still theres's a lot to do:
         </p>
         <h1>TODO:</h1>
         <li>
@@ -28,12 +28,12 @@ export default function CebinaeArticle() {
             Get rid of javascript-based animations everywhere it's possible to reduce CPU load by delegating calculations to GPU thread
         </li>
         <li>
-            Change default three.js render loop to my own custom in order to a acieve deeper control above 
+            Change default three.js render loop to my own custom in order to acieve a deeper control above 
             3d model
         </li>
         <li>
             Surely, there's a way to make 3d model even lighter itself - in addition to polygons decreasing and 3x times texures weight
-            reducing, 'scene' and 'model' optimisations can be done.  
+            reducing, 'scene' and 'model' optimizations can be done.  
         </li>
        
         <p>

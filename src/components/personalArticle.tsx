@@ -16,7 +16,7 @@ export default function PersonalArticle() {
         </p>
         <p>
             The first executable file I've ever wrote was a non-harmful joke virus that was able to
-            reveal a "rickroll" meme unexpectedly on windowsXP. Even though it wasn't a programming language, but a windows-scenario file,
+            reveal a <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Rick Astleys clip 'never gonna give you up'</a> unexpectedly on windowsXP. Even though it wasn't a programming language, but a windows-scenario file,
             it was invisivle for anti-malware programs and become the beginning of my hobby in times of elementary school.
        </p>
      

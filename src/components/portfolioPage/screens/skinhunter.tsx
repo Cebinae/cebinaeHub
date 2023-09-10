@@ -46,7 +46,7 @@ export default function SkinhunterFirst() {
                     SkinsHunter is a <span className={keywordSpan}>React Native</span> application written on <span className={keywordSpan}>TypeScript</span>. 
                     Since the beginning it was using <span className={keywordSpan}>ExpoCLI</span> and then 
                     was ejected in favor of <span className={keywordSpan}>NativeCLI</span> to achieve an advanced control above native side (<span className={keywordSpan}>gradle</span> build optimisation & android theme styling).
-                    The main business logic is executing inside <span className={keywordSpan}>background service</span> provided by <span className={keywordSpan}>native library rn-background-actions </span>
+                    The main business logic is executing inside <span className={keywordSpan}>background service</span> provided by <span className={keywordSpan}>native module rn-background-actions </span>
                      which allows to keep app always alive and still to send <span className={keywordSpan}>push-notifications</span> via <span className={keywordSpan}>Notifee</span>.
                     There're two layers of security in this application - it both uses marketplace's secured <span className={keywordSpan}>REST-API</span> with hash-managed SSH authorisation
                     (Ed25519) and store keys into encrypted store of <span className={keywordSpan}>rn-keychain</span> aside from unsensitive 
